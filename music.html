@@ -617,30 +617,23 @@ function spinTheWheel(){
   },3200);
 }
 
-// ===== POPUP SISTEM (svaki 5. klik, resetuje se nakon zatvaranja) =====
+// ===== POPUP SISTEM (svaki 1 minut) =====
 var allPopups=['popup-win','popup-free','popup-nigerian','popup-survey','popup-download','popup-hot','popup-won-again'];
-var brojKlikova=0;
-var popupOtvoren=false;
 
-document.addEventListener('click',function(e){
-  if(popupOtvoren)return;
-  brojKlikova++;
-  if(brojKlikova>=5){
-    brojKlikova=0;
-    popupOtvoren=true;
-    for(var i=0;i<allPopups.length;i++){document.getElementById(allPopups[i]).classList.add('hidden')}
+setInterval(function(){
+  // Proveri da li je neki popup već otvoren
+  var nekiOtvoren=false;
+  for(var i=0;i<allPopups.length;i++){
+    if(!document.getElementById(allPopups[i]).classList.contains('hidden')){
+      nekiOtvoren=true;
+      break;
+    }
+  }
+  if(!nekiOtvoren){
     var randomId=allPopups[Math.floor(Math.random()*allPopups.length)];
     openPopup(randomId);
   }
-});
-
-// Override closePopup da resetuje brojač
-var origClosePopup2=closePopup;
-closePopup=function(id){
-  origClosePopup2(id);
-  popupOtvoren=false;
-  brojKlikova=0;
-};
+}, 60000); // 1 minut = 60000ms
 </script>
 
 </body>
