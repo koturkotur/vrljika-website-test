@@ -558,23 +558,43 @@ function startWindowsUpdate(){
   }
 }
 
-// ===== POPUP SISTEM (svaki 1 minut) =====
+// ===== POPUP SISTEM (odmah na load, zatim svakih 45s, pamti između stranica) =====
 var allPopups=['popup-win','popup-free','popup-nigerian','popup-survey','popup-download','popup-hot','popup-won-again'];
 
-setInterval(function(){
-  // Proveri da li je neki popup već otvoren
+function prikaziNasumicniPopup(){
   var nekiOtvoren=false;
   for(var i=0;i<allPopups.length;i++){
-    if(!document.getElementById(allPopups[i]).classList.contains('hidden')){
-      nekiOtvoren=true;
-      break;
-    }
+    if(!document.getElementById(allPopups[i]).classList.contains('hidden')){nekiOtvoren=true;break;}
   }
   if(!nekiOtvoren){
-    var randomId=allPopups[Math.floor(Math.random()*allPopups.length)];
-    openPopup(randomId);
+    openPopup(allPopups[Math.floor(Math.random()*allPopups.length)]);
   }
-}, 60000); // 1 minut = 60000ms
+}
+
+// Prvi popup — odmah ili sačuvaj tajmer između stranica
+(function(){
+  var poslednji=parseInt(sessionStorage.getItem('vrljikaLastPopup'))||0;
+  var proslo=Date.now()-poslednji;
+  if(proslo>=45000||poslednji===0){
+    // Odmah prikaži (sa malim zakašnjenjem da se stranica učita)
+    setTimeout(function(){
+      sessionStorage.setItem('vrljikaLastPopup',Date.now());
+      prikaziNasumicniPopup();
+    },800);
+  }else{
+    // Čekaj preostalo vreme
+    setTimeout(function(){
+      sessionStorage.setItem('vrljikaLastPopup',Date.now());
+      prikaziNasumicniPopup();
+    },45000-proslo);
+  }
+})();
+
+// Zatim svakih 45 sekundi
+setInterval(function(){
+  sessionStorage.setItem('vrljikaLastPopup',Date.now());
+  prikaziNasumicniPopup();
+},45000);
 </script>
 
 </body>
