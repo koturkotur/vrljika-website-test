@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex,nofollow">
+<title>🛸 ZONA 69 — VIS Vrljika | OGRANIČEN PRISTUP</title>
+<style>
+  *{margin:0;padding:0}
+  @keyframes blink-hard{0%,100%{opacity:1}50%{opacity:0}}
+  @keyframes marquee{0%{transform:translateX(100vw)}100%{transform:translateX(-100%)}}
+  @keyframes ufo-hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  body{background:#f0ead8;background-image:url("data:image/svg+xml,%3Csvg width='300' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='150' y='100' text-anchor='middle' font-family='Impact' font-size='38' fill='%23d4c9a8' transform='rotate(-25,150,100)'%3EOGRANIČEN PRISTUP%3C/text%3E%3C/svg%3E");background-size:280px 180px;font-family:"Times New Roman",Georgia,serif;color:#1a1a1a;min-height:100vh;overflow-x:hidden;cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ctext y='22' font-size='20'%3E👽%3C/text%3E%3C/svg%3E") 0 0,auto}
+  .blink-fast{animation:blink-hard 0.4s steps(2) infinite}
+  .poverljivo-banner{background:#1a1a2e;color:#FFD700;font-family:"Courier New",monospace;font-size:12px;text-align:center;padding:5px 0;border-bottom:3px solid #8B0000;position:sticky;top:0;z-index:1000}
+  .marquee-wrap{overflow:hidden;white-space:nowrap;border-top:2px solid #1a1a2e;border-bottom:2px solid #1a1a2e;background:#fffef5;padding:4px 0}
+  .marquee-inner{display:inline-block;animation:marquee 15s linear infinite}
+  .marquee-text{font-family:"Comic Sans MS",cursive;font-size:14px;font-weight:bold;color:#1a1a2e}
+  .zaglavlje{background:linear-gradient(180deg,#1a1a2e,#2d2d44,#1a1a2e);text-align:center;padding:16px 10px 12px;border-bottom:4px double #FFD700}
+  .naslov{font-family:"Courier New","American Typewriter",monospace;font-size:36px;color:#FFD700;text-shadow:3px 3px 0 #000;letter-spacing:3px;text-transform:uppercase;margin:0}
+  .nav-bar{background:#fffef5;border:3px solid #1a1a2e;border-left:none;border-right:none;text-align:center;padding:4px 0}
+  .nav-bar a{display:inline-block;font-family:"Courier New",monospace;font-size:13px;color:#1a1a2e;text-decoration:none;background:#f5f0e0;padding:7px 14px;border:2px solid #1a1a2e;margin:3px 2px;box-shadow:3px 3px 0 #1a1a2e;transition:none;font-weight:bold}
+  .nav-bar a:hover{background:#FFD700;box-shadow:1px 1px 0 #1a1a2e;transform:translate(2px,2px)}
+  .nav-bar a.active{background:#FFD700}
+  .main-grid{display:grid;grid-template-columns:200px 1fr 200px;gap:12px;max-width:1150px;margin:12px auto;padding:0 8px}
+  .dokument{background:#fffef5;border:3px solid #1a1a2e;box-shadow:5px 5px 0 rgba(26,26,46,0.3);padding:16px;margin-bottom:12px;position:relative;font-size:14px;line-height:1.7;color:#1a1a1a}
+  .dokument::before{content:"";position:absolute;top:-3px;left:-3px;right:-3px;bottom:-3px;border:1px dashed #8B0000;pointer-events:none}
+  .dok-naslov{font-family:"Courier New","American Typewriter",monospace;font-size:20px;font-weight:bold;color:#1a1a2e;border-bottom:3px double #1a1a2e;padding-bottom:6px;margin-bottom:10px;letter-spacing:2px}
+  .sidebar-kartica{background:#fffef5;border:2px solid #1a1a2e;box-shadow:3px 3px 0 rgba(26,26,46,0.3);margin-bottom:8px;font-size:12px;color:#1a1a1a}
+  .sidebar-zaglavlje{background:linear-gradient(180deg,#1a1a2e,#2d2d44);color:#FFD700;font-weight:bold;font-size:12px;padding:4px 8px;font-family:"Courier New",monospace}
+  .gif-kartica{background:#f5f0e0;border:3px double #1a1a2e;padding:8px;text-align:center;display:inline-block;margin:6px;box-shadow:3px 3px 0 rgba(26,26,46,0.3)}
+  .gif-kartica img{display:block;max-width:100%;height:auto;image-rendering:pixelated}
+  .gif-oznaka{font-family:"Courier New",monospace;font-size:10px;color:#1a1a2e;margin-top:4px;font-weight:bold}
+  .dugme{display:inline-block;font-family:"Courier New",monospace;font-size:13px;font-weight:bold;color:#1a1a2e;background:#f5f0e0;border:2px solid #1a1a2e;padding:8px 20px;cursor:pointer;text-decoration:none;box-shadow:4px 4px 0 #1a1a2e;transition:none;margin:4px}
+  .dugme:hover{background:#FFD700;box-shadow:2px 2px 0 #1a1a2e;transform:translate(2px,2px)}
+  .futer{background:#1a1a2e;color:#8899aa;font-family:"Courier New",monospace;font-size:11px;text-align:center;padding:16px;border-top:3px solid #FFD700;margin-top:20px}
+  .ulazna-kapija{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:10000;display:flex;align-items:center;justify-content:center}
+  .ulazna-kapija.skriveno{display:none}
+  .kapija-sadrzaj{background:#fffef5;border:4px double #1a1a2e;padding:30px;text-align:center;max-width:500px;box-shadow:0 0 60px rgba(255,215,0,0.3)}
+  @media(max-width:900px){.main-grid{grid-template-columns:1fr}.naslov{font-size:24px}}
+</style>
+</head>
+<body>
+
+<div class="ulazna-kapija" id="ulazna-kapija">
+  <div class="kapija-sadrzaj">
+    <p style="font-family:Impact;font-size:28px;color:#8B0000;">🛸 OGRANIČENA ZONA 🛸</p>
+    <p style="font-size:20px;margin:10px 0;">👽👽👽</p>
+    <p style="font-size:15px;line-height:1.8;">ZONA 69 sadrži <strong style="color:#8B0000;">poverljiv humor</strong> i <strong style="color:#006600;">vanzemaljske GIF-ove</strong> iz drevnog interneta. <span class="blink-fast" style="color:#8B0000;">NIVO PRISTUPA: 18+</span></p>
+    <button onclick="document.getElementById('ulazna-kapija').classList.add('skriveno');sessionStorage.setItem('zona69','true')" class="dugme" style="font-size:16px;padding:12px 32px;margin:10px;">👽 IMAM DOZVOLU (18+) 👽</button>
+    <br><a href="index.html" style="font-family:'Courier New',monospace;font-size:11px;color:#666;">Povratak u bazu...</a>
+  </div>
+</div>
+
+<div class="poverljivo-banner">🛸 ZONA 69 — OGRANIČEN PRISTUP — 18+ SAMO — NEOVLAŠĆENO OSOBLJE ĆE BITI PROVERENO 🛸</div>
+
+<div class="marquee-wrap" style="border-color:#006600;"><div class="marquee-inner"><span class="marquee-text" style="color:#006600;">👽 ISTINA JE OVDE 👽 VANZEMALJCI POSTOJE 👽 ONI SLUŠAJU VRLJIKU 👽 VEROVATNO 👽 NEMAMO DOKAZE 👽 ALI VERUJEMO 👽</span></div></div>
+
+<header class="zaglavlje">
+  <div style="font-size:44px;animation:ufo-hover 3s steps(6) infinite;display:inline-block;">🛸</div>
+  <h1 class="naslov">ZONA 69</h1>
+  <p style="font-family:'Courier New',monospace;font-size:12px;color:#8899aa;margin-top:4px;">OGRANIČEN MATERIJAL █ NIVO PRISTUPA 18+ █ SAMO HUMORISTIČKI SADRŽAJ</p>
+</header>
+
+<nav class="nav-bar">
+  <a href="index.html">📁 GLAVNI DOSIJE</a><a href="about.html">👤 LIČNI DOSIJEI</a><a href="music.html">🔊 SIGNALI</a><a href="contact.html">📡 KONTAKT</a><a href="razonoda.html" class="active">🛸 ZONA 69</a>
+</nav>
+
+<div class="main-grid">
+  <aside>
+    <div class="sidebar-kartica"><div class="sidebar-zaglavlje">🛸 PRAVILA ZONE 69</div><div style="padding:8px;font-size:10px;line-height:1.8;">
+      <p>1. Bez neovlašćenog pretresa</p><p>2. Prijavite sva viđenja NLO-a</p><p>3. GIF-ovi su šala, ne vanzemaljci</p><p>4. Neka kapa od folije bude na glavi</p>
+    </div></div>
+  </aside>
+
+  <main>
+    <div class="dokument">
+      <div class="dok-naslov">👽 VANZEMALJSKI ARTEFAKTI (GIF-ovi)</div>
+      <p style="font-family:'Courier New',monospace;font-size:11px;color:#666;text-align:center;margin-bottom:10px;">Pronađeni iz drevnog GeoCities matičnog broda</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px;">
+        <div class="gif-kartica"><img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Movicon-sexy.gif" alt="Vanzemaljski ples" style="width:128px;height:120px;" loading="lazy"><div class="gif-oznaka">VANZEMALJSKI PLES (2005)</div></div>
+        <div class="gif-kartica"><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Spinning_Dancer.gif" alt="Vanzemaljska tehnika" style="width:150px;height:200px;" loading="lazy"><div class="gif-oznaka">VANZEMALJSKA TEHNIKA (2003)</div></div>
+        <div class="gif-kartica"><img src="https://gif-avatars.com/img/90x90/flirty.gif" alt="Vanzemaljski avatar" style="width:135px;height:135px;" loading="lazy"><div class="gif-oznaka">VANZEMALJSKI AVATAR (2004)</div></div>
+        <div class="gif-kartica"><img src="http://dl7.glitter-graphics.net/pub/1841/1841297k6oocb0e7a.gif" alt="Vanzemaljski blink" style="width:165px;height:auto;" loading="lazy"><div class="gif-oznaka">VANZEMALJSKI TREPTAČ (2006)</div></div>
+        <div class="gif-kartica"><img src="https://pixy.org/src/69/693480.gif" alt="Vanzemaljski život" style="width:120px;height:auto;" loading="lazy"><div class="gif-oznaka">VANZEMALJSKI ŽIVOT (2002)</div></div>
+        <div class="gif-kartica"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Hampster_dance.gif/220px-Hampster_dance.gif" alt="Vanzemaljski glodar" style="width:176px;height:auto;" loading="lazy"><div class="gif-oznaka">VANZEMALJSKI GLODAR (1999)</div></div>
+      </div>
+    </div>
+
+    <div class="dokument">
+      <div class="dok-naslov">📡 PRESRETNUTI PRENOSI (VICEVI)</div>
+      <div style="background:#faf8e8;border:1px dashed #1a1a2e;padding:10px;margin:8px 0;"><p style="font-family:'Courier New';font-size:11px;color:#1a1a2e;">PRENOS 001:</p><p style="font-style:italic;">"Zašto je vanzemaljac posetio Gornji Milanovac? Otkrili su 'anomalan muzički signal.' To je samo Vrljika bila na probi."</p></div>
+      <div style="background:#faf8e8;border:1px dashed #1a1a2e;padding:10px;margin:8px 0;"><p style="font-family:'Courier New';font-size:11px;color:#1a1a2e;">PRENOS 002:</p><p style="font-style:italic;">"Vanzemaljci su pitali da se pridruže bendu. Odbijeni su. 'Zvučite previše normalno', rekao je gitarista."</p></div>
+      <div style="background:#faf8e8;border:1px dashed #1a1a2e;padding:10px;margin:8px 0;"><p style="font-family:'Courier New';font-size:11px;color:#1a1a2e;">PRENOS 003:</p><p style="font-style:italic;">"Zona 51 nije ništa u poređenju sa nama. Zona 69 je gde su PRAVE tajne. (Tajna je: ne znamo da štimujemo.)"</p></div>
+    </div>
+  </main>
+
+  <aside>
+    <div class="sidebar-kartica"><div class="sidebar-zaglavlje">🛸 IZJAVA O OGRANIČENJU</div><div style="padding:8px;font-size:10px;line-height:1.5;">
+      <p>Nijedan stvarni vanzemaljac nije kontaktiran tokom izrade ove stranice. Vanzemaljski GIF-ovi preuzeti iz javnih arhiva. Istina je tamo negde. (Na Instagramu.)</p>
+    </div></div>
+  </aside>
+</div>
+
+<footer class="futer">
+  <p>🛸 ZONA 69 — POVRATAK U BAZU — PRENOS ZAVRŠEN 🛸</p>
+</footer>
+
+<script>
+if(!sessionStorage.getItem('zona69'))document.getElementById('ulazna-kapija').classList.remove('skriveno');
+(function(){var s=['👽','🛸','📡','🔍'];var l=0;document.addEventListener('mousemove',function(e){var n=Date.now();if(n-l<100)return;l=n;var t=document.createElement('div');t.style.cssText='position:fixed;pointer-events:none;z-index:99999;font-size:18px;';t.textContent=s[Math.floor(Math.random()*s.length)];t.style.left=(e.pageX-9)+'px';t.style.top=(e.pageY-9)+'px';document.body.appendChild(t);var o=1;var f=setInterval(function(){o-=0.08;t.style.opacity=o;if(o<=0){clearInterval(f);t.remove()}},40)})})();
+</script>
+</body>
+</html>

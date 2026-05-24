@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex,nofollow">
+<title>📁 LIČNI DOSIJEI — VIS Vrljika | DOSIJEI ČLANOVA</title>
+<style>
+  *{margin:0;padding:0}
+  @keyframes blink-hard{0%,100%{opacity:1}50%{opacity:0}}
+  @keyframes marquee{0%{transform:translateX(100vw)}100%{transform:translateX(-100%)}}
+  @keyframes ufo-hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  body{background:#f0ead8;background-image:url("data:image/svg+xml,%3Csvg width='300' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='150' y='100' text-anchor='middle' font-family='Impact' font-size='38' fill='%23d4c9a8' transform='rotate(-25,150,100)'%3ESTROGO POVERLJIVO%3C/text%3E%3C/svg%3E");background-size:280px 180px;font-family:"Times New Roman",Georgia,serif;color:#1a1a1a;min-height:100vh;overflow-x:hidden;cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ctext y='22' font-size='20'%3E🕵️%3C/text%3E%3C/svg%3E") 0 0,auto}
+  .blink-fast{animation:blink-hard 0.4s steps(2) infinite}
+  .poverljivo-banner{background:#1a1a2e;color:#FFD700;font-family:"Courier New",monospace;font-size:12px;text-align:center;padding:5px 0;border-bottom:3px solid #8B0000;position:sticky;top:0;z-index:1000}
+  .marquee-wrap{overflow:hidden;white-space:nowrap;border-top:2px solid #1a1a2e;border-bottom:2px solid #1a1a2e;background:#fffef5;padding:4px 0}
+  .marquee-inner{display:inline-block;animation:marquee 15s linear infinite}
+  .marquee-text{font-family:"Comic Sans MS",cursive;font-size:14px;font-weight:bold;color:#1a1a2e}
+  .zaglavlje{background:linear-gradient(180deg,#1a1a2e,#2d2d44,#1a1a2e);text-align:center;padding:16px 10px 12px;border-bottom:4px double #FFD700}
+  .naslov{font-family:"Courier New","American Typewriter",monospace;font-size:38px;color:#FFD700;text-shadow:3px 3px 0 #000;letter-spacing:3px;text-transform:uppercase;margin:0}
+  .podnaslov{font-family:"Courier New",monospace;font-size:12px;color:#8899aa;letter-spacing:2px;margin-top:4px}
+  .nav-bar{background:#fffef5;border:3px solid #1a1a2e;border-left:none;border-right:none;text-align:center;padding:4px 0}
+  .nav-bar a{display:inline-block;font-family:"Courier New",monospace;font-size:13px;color:#1a1a2e;text-decoration:none;background:#f5f0e0;padding:7px 14px;border:2px solid #1a1a2e;margin:3px 2px;box-shadow:3px 3px 0 #1a1a2e;transition:none;font-weight:bold}
+  .nav-bar a:hover{background:#FFD700;box-shadow:1px 1px 0 #1a1a2e;transform:translate(2px,2px)}
+  .nav-bar a.active{background:#FFD700}
+  .main-grid{display:grid;grid-template-columns:200px 1fr 200px;gap:12px;max-width:1150px;margin:12px auto;padding:0 8px}
+  .dokument{background:#fffef5;border:3px solid #1a1a2e;box-shadow:5px 5px 0 rgba(26,26,46,0.3);padding:16px;margin-bottom:12px;position:relative;font-size:14px;line-height:1.7;color:#1a1a1a}
+  .dokument::before{content:"";position:absolute;top:-3px;left:-3px;right:-3px;bottom:-3px;border:1px dashed #8B0000;pointer-events:none}
+  .dok-naslov{font-family:"Courier New","American Typewriter",monospace;font-size:20px;font-weight:bold;color:#1a1a2e;border-bottom:3px double #1a1a2e;padding-bottom:6px;margin-bottom:10px;letter-spacing:2px}
+  .ref-broj{font-family:"Courier New",monospace;font-size:10px;color:#666;text-align:right;margin-top:-6px;margin-bottom:10px}
+  .sidebar-kartica{background:#fffef5;border:2px solid #1a1a2e;box-shadow:3px 3px 0 rgba(26,26,46,0.3);margin-bottom:8px;font-size:12px;color:#1a1a1a}
+  .sidebar-zaglavlje{background:linear-gradient(180deg,#1a1a2e,#2d2d44);color:#FFD700;font-weight:bold;font-size:12px;padding:4px 8px;font-family:"Courier New",monospace}
+  .pecat{display:inline-block;font-family:Impact,"Arial Black",sans-serif;font-size:14px;color:#8B0000;border:3px solid #8B0000;padding:4px 10px;text-transform:uppercase;transform:rotate(-4deg);opacity:0.85;margin:6px;background:rgba(255,255,240,0.8)}
+  .redacted{background:#000;color:#000;padding:0 4px;cursor:pointer;display:inline-block}
+  .redacted:hover{color:#FFD700;background:#333}
+  .subjekat{background:linear-gradient(135deg,#faf8e8,#f0ead8);border:2px solid #1a1a2e;padding:10px;margin:8px 0;display:flex;align-items:center;gap:12px;box-shadow:3px 3px 0 rgba(26,26,46,0.2)}
+  .subjekat .fotografija{width:50px;height:50px;background:#1a1a2e;border:2px solid #FFD700;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+  .subjekat .info{flex:1;font-family:"Courier New",monospace;font-size:12px;line-height:1.6}
+  .subjekat .info strong{color:#1a1a2e;font-size:14px}
+  .futer{background:#1a1a2e;color:#8899aa;font-family:"Courier New",monospace;font-size:11px;text-align:center;padding:16px;border-top:3px solid #FFD700;margin-top:20px}
+  @media(max-width:900px){.main-grid{grid-template-columns:1fr}.naslov{font-size:24px}}
+</style>
+</head>
+<body>
+
+<div class="poverljivo-banner">📁 DOSIJEI SUBJEKATA — NEOVLAŠĆEN PRISTUP ZABRANJEN — POTREBAN NIVO PRISTUPA 6 📁</div>
+
+<div class="marquee-wrap" style="border-color:#8B0000;"><div class="marquee-inner"><span class="marquee-text" style="color:#8B0000;">🔍 KO SU ONI? 🔍 ŠTA ŽELE? 🔍 ZAŠTO NE ZNAJU DA ŠIMUJU? 🔍 ISTRAGA SE NASTAVLJA 🔍</span></div></div>
+
+<header class="zaglavlje">
+  <div style="font-size:40px;animation:ufo-hover 3s steps(6) infinite;display:inline-block;">🕵️</div>
+  <h1 class="naslov">LIČNI DOSIJEI</h1>
+  <p class="podnaslov">DOSIJEI OSOBLJA █ ISTRAGA VRLJIKA █ ODELJAK: SIGMA-6</p>
+  <div style="margin-top:8px;"><span class="pecat">SAMO ZA SLUŽBENU UPOTREBU</span></div>
+</header>
+
+<nav class="nav-bar">
+  <a href="index.html">📁 GLAVNI DOSIJE</a>
+  <a href="about.html" class="active">👤 LIČNI DOSIJEI</a>
+  <a href="music.html">🔊 SIGNALI</a>
+  <a href="contact.html">📡 KONTAKT</a>
+  <a href="razonoda.html">🛸 ZONA 69</a>
+</nav>
+
+<div class="main-grid">
+  <aside>
+    <div class="sidebar-kartica"><div class="sidebar-zaglavlje">📋 INDEKS DOSIJEA</div><div style="padding:8px;font-size:10px;font-family:'Courier New',monospace;line-height:1.8;">
+      <p>D-001: GLAS</p><p>D-002: ŽICA-1</p><p>D-003: ŽICA-2</p><p>D-004: DIRKE</p><p>D-005: UDARALJKE</p><p>D-006: BAS</p>
+    </div></div>
+    <div class="sidebar-kartica"><div class="sidebar-zaglavlje">⚠️ UPOZORENJE</div><div style="padding:8px;font-size:10px;">
+      <p>Subjekti se smatraju <strong>muzički nepredvidivim</strong>. Pristupiti sa oprezom. Ponuditi grickalice za smirivanje situacije.</p>
+    </div></div>
+  </aside>
+
+  <main>
+    <div class="dokument">
+      <div class="dok-naslov">📄 PREGLED SLUČAJA</div>
+      <div class="ref-broj">REF: VLK-OSOB-001</div>
+      <p style="font-size:15px;line-height:1.9;">
+        Sledeći dosijei sastavljeni su od strane operativaca agencije <span class="redacted">█████████</span> tokom perioda od <span class="redacted">██</span> meseci. Subjekti su opisani kao <strong>"šest dobrih ljudi ali loših muzičara koji samo žele da se dobro zabave i svoj entuzijazam prenesu na narod."</strong>
+      </p>
+      <p style="font-size:13px;color:#666;margin-top:8px;">
+        Identiteti delimično redigovani iz operativnih razloga. (Zapravo jednostavno ne znamo sva imena.)
+      </p>
+    </div>
+
+    <div class="dokument">
+      <div class="dok-naslov">👤 DOSIJEI SUBJEKATA</div>
+
+      <div class="subjekat"><div class="fotografija">🎤</div><div class="info"><strong>SUBJEKAT D-001: "GLAS"</strong><br>ULOGA: Vokal █ STATUS: Aktivan<br>NAPOMENE: Subjekat pokazuje sposobnost proizvođenja melodičnih zvukova. Povremeno u ispravnom tonalitetu. Poznat po tome što drži mikrofon sa samopouzdanjem. <span style="color:#8B0000;">Nivo pretnje: MELODIČAN.</span></div></div>
+      <div class="subjekat"><div class="fotografija">🎸</div><div class="info"><strong>SUBJEKAT D-002: "ŽICA-1"</strong><br>ULOGA: Gitarista (Glavni) █ STATUS: Aktivan<br>NAPOMENE: Subjekat poseduje jednu (1) električnu gitaru. Pokazuje povremenu kompetentnost. Izvor približno 73% svih solaža. <span style="color:#8B0000;">Nivo pretnje: VIRTUOZAN (ponekad).</span></div></div>
+      <div class="subjekat"><div class="fotografija">🎸</div><div class="info"><strong>SUBJEKAT D-003: "ŽICA-2"</strong><br>ULOGA: Gitarista (Ritam) █ STATUS: Aktivan<br>NAPOMENE: Postojanje potvrđeno vizuelno. Slušna potvrda na čekanju. Sumnja se da je "onaj koji popunjava praznine." <span style="color:#FFD700;">Nivo pretnje: AMBIJENTALAN.</span></div></div>
+      <div class="subjekat"><div class="fotografija">🎹</div><div class="info"><strong>SUBJEKAT D-004: "DIRKE"</strong><br>ULOGA: Klavijaturista █ STATUS: Aktivan<br>NAPOMENE: Poseduje više elektronskih uređaja. Pritiskuje dugmiće dok ne postigne pozitivan ishod. Stopa uspeha: poverljivo. <span style="color:#006600;">Nivo pretnje: ELEKTRONSKI.</span></div></div>
+      <div class="subjekat"><div class="fotografija">🥁</div><div class="info"><strong>SUBJEKAT D-005: "UDARALJKE"</strong><br>ULOGA: Bubnjar █ STATUS: Aktivan<br>NAPOMENE: Generiše ritmičke obrasce. Održava tempo. <em>Uglavnom.</em> Izvor strukturalnog integriteta cele operacije. <span style="color:#8B0000;">Nivo pretnje: TEMELJNI.</span></div></div>
+      <div class="subjekat"><div class="fotografija">🎸</div><div class="info"><strong>SUBJEKAT D-006: "NISKA FREKVENCIJA"</strong><br>ULOGA: Basista █ STATUS: Aktivan<br>NAPOMENE: Oseća se, a ne čuje. Suštinski ali često neprimećen. Ako se ukloni, cela muzička struktura se urušava (navodno). <span style="color:#1a1a2e;">Nivo pretnje: PODZEMNI.</span></div></div>
+    </div>
+
+    <div class="dokument">
+      <div class="dok-naslov">📝 BELEŠKE AGENATA</div>
+      <p style="font-family:'Courier New',monospace;font-size:12px;line-height:2;">
+        > Svih šest subjekata sarađuje dobrovoljno<br>
+        > Nisu pronađeni dokazi prinude<br>
+        > Probe se održavaju u garaži — lokacija <span class="redacted">███████████</span><br>
+        > Subjekti konzumiraju grickalice tokom pauza — potrebna dalja istraga<br>
+        > Preporučuje se nastavak nadzora (praćenje Instagrama)
+      </p>
+      <p style="font-size:10px;color:#666;margin-top:8px;">*ovi dosijei su izmišljeni. bend postoji. istraga ne postoji. verovatno.</p>
+    </div>
+  </main>
+
+  <aside>
+    <div class="sidebar-kartica"><div class="sidebar-zaglavlje">🛡️ IZJAVA O OGRANIČENJU</div><div style="padding:8px;font-size:10px;line-height:1.5;">
+      <p>Nije sprovođen nikakav stvarni nadzor. Samo smo pogledali njihov Instagram. Nekoliko puta. Iz "istraživačkih" razloga.</p>
+    </div></div>
+  </aside>
+</div>
+
+<footer class="futer">
+  <p>📁 LIČNI DOSIJEI █ PREDMET BR. VLK-2023 █ SVI DOSIJEI DEKLASIFIKOVANI █</p>
+  <p style="font-size:9px;color:#555;margin-top:4px;">Subjekti su svesni ovog sajta. Odobrili su ga. Verovatno.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.redacted').forEach(function(el){el.addEventListener('click',function(){this.classList.toggle('redacted')})});
+(function(){var s=['🕵️','📁','🔍','👤','📋'];var l=0;document.addEventListener('mousemove',function(e){var n=Date.now();if(n-l<100)return;l=n;var t=document.createElement('div');t.style.cssText='position:fixed;pointer-events:none;z-index:99999;font-size:18px;';t.textContent=s[Math.floor(Math.random()*s.length)];t.style.left=(e.pageX-9)+'px';t.style.top=(e.pageY-9)+'px';document.body.appendChild(t);var o=1;var f=setInterval(function(){o-=0.08;t.style.opacity=o;if(o<=0){clearInterval(f);t.remove()}},40)})})();
+</script>
+</body>
+</html>

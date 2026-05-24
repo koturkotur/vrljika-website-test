@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📞 KONTAKT — VIS Vrljika | Pišite Nam!!! ★★★★★</title>
+<style>
+  *{margin:0;padding:0}
+  @keyframes blink-hard{0%,100%{opacity:1}50%{opacity:0}}
+  @keyframes marquee{0%{transform:translateX(100vw)}100%{transform:translateX(-100%)}}
+  @keyframes pulse-glow{0%,100%{box-shadow:0 0 10px #FF00FF}50%{box-shadow:0 0 40px #FF00FF,0 0 80px #FFFF00}}
+  @keyframes scan-line{0%{top:-100%}100%{top:100%}}
+  @keyframes shake{0%,100%{transform:translate(0)}10%{transform:translate(-3px,-2px)}20%{transform:translate(3px,2px)}30%{transform:translate(-2px,-3px)}40%{transform:translate(2px,3px)}50%{transform:translate(-3px,2px)}60%{transform:translate(3px,-2px)}70%{transform:translate(-1px,3px)}80%{transform:translate(1px,-3px)}90%{transform:translate(-2px,1px)}}
+  body{background:#0a0a2e;background-image:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,0,0.03) 2px,rgba(0,255,0,0.03) 4px);font-family:"Times New Roman",Times,serif;color:#C0C0C0;cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ctext y='24' font-size='24'%3E📧%3C/text%3E%3C/svg%3E") 0 0,auto;overflow-x:hidden;min-height:100vh}
+  .blink-fast{animation:blink-hard 0.4s steps(2) infinite}
+  .blink-slow{animation:blink-hard 1.2s steps(2) infinite}
+  .urgency-bar{background:#FF0000;color:#FFFF00;font-family:"Impact","Arial Black",sans-serif;font-size:14px;text-align:center;padding:5px 0;border-bottom:4px solid #FFFF00;position:sticky;top:0;z-index:1000}
+  .urgency-bar .countdown{font-family:"Courier New",monospace;background:#000;color:#00FF00;padding:2px 8px;font-size:16px;font-weight:bold;display:inline-block}
+  .marquee-wrap{overflow:hidden;white-space:nowrap;border-top:3px solid #FF00FF;border-bottom:3px solid #FF00FF;background:#000;padding:4px 0;margin:4px 0}
+  .marquee-inner{display:inline-block;animation:marquee 15s linear infinite}
+  .marquee-text{font-family:"Comic Sans MS","Papyrus",cursive;font-size:14px;font-weight:bold;text-shadow:2px 2px 0 #000}
+  .top-banner{background:linear-gradient(180deg,#1a0033,#000033,#001a33,#0a0a2e);text-align:center;padding:12px 0 8px;border-bottom:5px solid #FF00FF;position:relative;overflow:hidden}
+  .top-banner::after{content:"";position:absolute;top:0;left:0;width:200%;height:3px;background:rgba(255,255,255,0.15);animation:scan-line 3s linear infinite}
+  .page-title{font-family:"Impact","Arial Black",sans-serif;font-size:38px;color:#FFFF00;text-shadow:3px 3px 0 #FF00FF,0 0 20px #FF00FF;letter-spacing:2px;text-transform:uppercase;margin:0}
+  .nav-bar{background:#FF00FF;border:4px solid #000;border-left:none;border-right:none;text-align:center;padding:4px 0}
+  .nav-bar a{display:inline-block;font-family:"Impact","Arial Black",sans-serif;font-size:13px;color:#000;text-decoration:none;background:#FFFF00;padding:7px 14px;border:3px solid #000;margin:3px 2px;box-shadow:4px 4px 0 #000;transition:none}
+  .nav-bar a:hover{background:#00FF00;box-shadow:2px 2px 0 #000;transform:translate(2px,2px)}
+  .nav-bar a.active{background:#00FF00}
+  .main-grid{display:grid;grid-template-columns:1fr 2fr 1fr;gap:12px;max-width:1200px;margin:12px auto;padding:0 8px}
+  .content-box{background:rgba(255,255,255,0.95);border:5px solid #000;box-shadow:6px 6px 0 #FF00FF;padding:16px;margin-bottom:12px;color:#000;font-size:14px;line-height:1.6;position:relative}
+  .content-box::before{content:"";position:absolute;top:-5px;left:-5px;right:-5px;bottom:-5px;border:2px dashed #FF00FF;pointer-events:none;z-index:1}
+  .content-title{font-family:"Impact","Arial Black",sans-serif;font-size:26px;color:#FF00FF;text-shadow:3px 3px 0 #000;margin-bottom:10px}
+  .aero-btn{display:inline-block;font-family:"Segoe UI","Trebuchet MS",sans-serif;font-size:14px;font-weight:bold;color:#FFF;text-shadow:0 1px 2px rgba(0,0,0,0.4);background:linear-gradient(180deg,#7BC8F6,#4BA3E3 40%,#0B5B9D);border:none;border-radius:50px;padding:10px 28px;cursor:pointer;text-decoration:none;box-shadow:0 1px 0 rgba(255,255,255,0.5) inset,0 -1px 0 rgba(0,0,0,0.2) inset,0 4px 0 #0B5B9D,0 6px 12px rgba(0,0,0,0.3);position:relative;transition:none;margin:4px}
+  .aero-btn::after{content:"";position:absolute;top:3px;left:12px;right:12px;height:40%;background:linear-gradient(180deg,rgba(255,255,255,0.7),transparent);border-radius:50px;pointer-events:none}
+  .aero-btn-gold{background:linear-gradient(180deg,#FFE566,#FFD700 40%,#B8960F);color:#000;text-shadow:0 1px 0 rgba(255,255,255,0.5);box-shadow:0 1px 0 rgba(255,255,255,0.5) inset,0 -1px 0 rgba(0,0,0,0.2) inset,0 4px 0 #8B7300,0 6px 12px rgba(0,0,0,0.3),0 0 30px rgba(255,215,0,0.5);font-size:16px;padding:12px 32px;animation:pulse-glow 1s steps(2) infinite}
+  .sidebar-card{background:#ECE9D8;border:3px solid #0054E3;box-shadow:2px 2px 0 #000;margin-bottom:10px;font-family:"Tahoma",sans-serif;font-size:12px;color:#000}
+  .sidebar-card-header{background:linear-gradient(180deg,#0A6EFF,#0054E3);color:#FFF;font-weight:bold;font-size:12px;padding:3px 8px;text-shadow:1px 1px 0 #003399}
+  .scam-form input,.scam-form textarea,.scam-form select{width:90%;padding:10px;margin:6px 0;border:4px solid #000;box-shadow:4px 4px 0 #000;font-family:"Times New Roman",serif;font-size:15px;background:#FFFF00;color:#000}
+  .scam-form input:focus,.scam-form textarea:focus{outline:4px solid #FF00FF;background:#FFF}
+  .scam-form label{font-family:"Impact","Arial Black",sans-serif;font-size:13px;color:#FF0000;text-shadow:2px 2px 0 #FFFF00;display:block;margin-top:6px}
+  .credit-card-input{background:#000!important;color:#00FF00!important;font-family:"Courier New",monospace!important;font-size:18px!important;text-align:center;letter-spacing:3px}
+  .fake-scam-badge{background:linear-gradient(180deg,#FFD700,#B8960F);border:3px solid #8B7300;padding:6px 12px;display:inline-block;font-family:Impact,sans-serif;font-size:12px;color:#000;text-align:center}
+  .xp-dialog{background:#ECE9D8;border:3px solid #0054E3;border-radius:8px 8px 0 0;box-shadow:3px 3px 10px rgba(0,0,0,0.5);margin-bottom:12px;overflow:hidden;font-family:"Tahoma","Segoe UI",sans-serif;color:#000}
+  .xp-dialog-titlebar{background:linear-gradient(180deg,#0A6EFF,#0054E3 8%,#0054E3 92%,#003BB3);color:#FFF;font-weight:bold;font-size:13px;padding:4px 8px;display:flex;justify-content:space-between;align-items:center;text-shadow:1px 1px 0 #003399}
+  .xp-dialog-body{padding:12px;font-size:13px;line-height:1.5}
+  .site-footer{background:#000;color:#808080;font-family:"Times New Roman",serif;font-size:11px;text-align:center;padding:16px;border-top:5px solid #FF00FF;margin-top:20px}
+  /* --- POPUP OVERLAY --- */
+  .popup-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.75);z-index:9999;display:flex;align-items:center;justify-content:center}
+  .popup-overlay.hidden{display:none!important}
+  .scam-popup{background:#FFF;border:4px solid #FF0000;box-shadow:0 0 40px #FF0000,0 0 80px #FFFF00;max-width:520px;width:90%;text-align:center;animation:pulse-glow 1s steps(2) infinite;position:relative;max-height:85vh;overflow-y:auto}
+  .scam-popup-header{background:linear-gradient(180deg,#FF4444,#CC0000);color:#FFFF00;font-family:"Impact","Arial Black",sans-serif;font-size:22px;padding:10px 36px 10px 16px;text-shadow:2px 2px 0 #000;letter-spacing:2px;position:relative}
+  .scam-popup-close{position:absolute;top:6px;right:8px;width:26px;height:26px;background:linear-gradient(180deg,#FF8C8C,#E81123 40%,#B3000F);color:#FFF;border:2px solid #FFF;border-radius:4px;font-size:16px;font-weight:bold;line-height:22px;text-align:center;cursor:pointer;font-family:Tahoma,sans-serif;z-index:2;text-shadow:none}
+  .scam-popup-close:hover{background:linear-gradient(180deg,#FFAAAA,#FF3333 40%,#CC0000)}
+  .scam-popup-body{padding:16px;font-family:"Comic Sans MS",cursive;color:#000;font-size:15px;line-height:1.6}
+  .scam-popup.blue{border-color:#0054E3;box-shadow:0 0 40px #0054E3}
+  .scam-popup.blue .scam-popup-header{background:linear-gradient(180deg,#0A6EFF,#0054E3)}
+  .scam-popup.gold{border-color:#FFD700;box-shadow:0 0 40px #FFD700}
+  .scam-popup.gold .scam-popup-header{background:linear-gradient(180deg,#FFE566,#B8960F);color:#000;text-shadow:1px 1px 0 #FFF}
+  .scam-popup.green{border-color:#00FF00;box-shadow:0 0 40px #00FF00}
+  .scam-popup.green .scam-popup-header{background:linear-gradient(180deg,#44FF44,#00AA00)}
+  .fake-card-display{font-family:"Courier New",monospace;font-size:20px;background:linear-gradient(135deg,#1a1a2e,#16213e);color:#00FF00;padding:12px 20px;border:3px solid #FFD700;text-align:center;letter-spacing:3px;display:inline-block;text-shadow:0 0 8px #00FF00;border-radius:6px}
+  .scam-progress{background:#C0C0C0;border:2px inset #808080;height:24px;margin:10px 0;position:relative;overflow:hidden}
+  .scam-progress-fill{height:100%;background:repeating-linear-gradient(90deg,#00AA00,#00AA00 10px,#00CC00 10px,#00CC00 20px);width:0%;transition:width 0.1s steps(20)}
+  .scam-progress-text{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;font-family:Tahoma,sans-serif;font-size:11px;font-weight:bold;color:#FFF;text-shadow:1px 1px 0 #000}
+  .xp-btn{font-family:Tahoma,sans-serif;font-size:12px;padding:4px 16px;background:linear-gradient(180deg,#ECE9D8,#D4D0C8);border:2px outset #FFF;color:#000;cursor:pointer}
+  .aero-btn-gold{background:linear-gradient(180deg,#FFE566,#FFD700 40%,#B8960F);color:#000;text-shadow:0 1px 0 rgba(255,255,255,0.5);box-shadow:0 1px 0 rgba(255,255,255,0.5) inset,0 -1px 0 rgba(0,0,0,0.2) inset,0 4px 0 #8B7300,0 6px 12px rgba(0,0,0,0.3),0 0 30px rgba(255,215,0,0.5)}
+  .aero-btn-gold:hover{box-shadow:0 0 50px rgba(255,215,0,0.8)}
+  .aero-btn-green{background:linear-gradient(180deg,#8FE06B,#78C257 40%,#3B8C25)}
+  .aero-btn-red{background:linear-gradient(180deg,#FF6B6B,#CC0000 40%,#880000)}
+  @media(max-width:900px){.main-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- URGENCY BAR -->
+<div class="urgency-bar">
+  ⚠️ <span class="blink-fast">HITAN KONTAKT!</span> ⚠️ &nbsp; ODGOVARAMO ZA &nbsp;
+  <span class="countdown" id="countdown">04:59</span> &nbsp;
+  <span class="blink-slow">POŠALJI PORUKU ODMAH!!!</span> ⚠️
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" style="border-color:#00FF00;">
+  <div class="marquee-inner">
+    <span class="marquee-text" style="color:#00FF00;">🟢 REZERVIŠI SVIRKU 🟢 POŠALJI PORUKU 🟢 100% ODGOVARAMO 🟢 MOŽDA 🟢 VEROVATNO 🟢 ZAVISI OD RASPOLOŽENJA 🟢</span>
+  </div>
+</div>
+
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <h1 class="page-title">📞 KONTAKT — JAVITE NAM SE!!!</h1>
+  <p style="font-family:'Comic Sans MS',cursive;font-size:11px;color:#808080;margin-top:4px;">Odgovaramo u roku od 24h* | <span style="color:#00FF00;">BESPLATAN</span> kontakt | <span class="fake-scam-badge">VERIFIKOVANO</span></p>
+  <p style="font-size:8px;color:#555;">*24 sata, 24 dana, 24 nedelje... šta god prvo dođe</p>
+</div>
+
+<!-- NAV -->
+<nav class="nav-bar">
+  <a href="index.html">🏠 POČETNA</a>
+  <a href="about.html">ℹ️ O NAMA</a>
+  <a href="music.html">🎵 MUZIKA</a>
+  <a href="contact.html" class="active">📞 KONTAKT</a>
+  <a href="razonoda.html">🔞 RAZONODA</a>
+</nav>
+
+<!-- MAIN -->
+<div class="main-grid">
+  <!-- LEFT SIDEBAR -->
+  <aside>
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">📱 KONTAKT INFO</div>
+      <div style="padding:8px;font-size:11px;line-height:1.8;">
+        <p>📞 <strong>Petar:</strong> 064/0260771</p>
+        <p>📧 <strong>Email:</strong> visvrljika@gmail.com</p>
+        <p>📍 <strong>Adresa:</strong> Gornji Milanovac</p>
+        <p>🌐 <strong>Web:</strong> upravo ste ovde</p>
+        <p>📷 <strong>Instagram:</strong> @visvrljika</p>
+        <p>📘 <strong>Facebook:</strong> /VokalnoInstrumentalniSastavVrljika</p>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">⏰ RADNO VREME</div>
+      <div style="padding:8px;font-size:11px;line-height:1.8;">
+        <p>Ponedeljak: možda</p>
+        <p>Utorak: verovatno</p>
+        <p>Sreda: ko zna</p>
+        <p>Četvrtak: ponekad</p>
+        <p>Petak: uglavnom</p>
+        <p>Subota: da (posle 12)</p>
+        <p>Nedelja: ne (odmaramo)</p>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">⚠️ VAŽNO</div>
+      <div style="padding:8px;font-size:11px;">
+        <p>Pre nego što nas kontaktirate:</p>
+        <p>✅ Proverite da li je telefon uključen</p>
+        <p>✅ Proverite da li imate signal</p>
+        <p>✅ Pripremite se na odgovor "ko je?"</p>
+        <p>✅ Nemojte zvati posle 22h</p>
+        <p>✅ Ne tražite pare (nemamo ih)</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CENTER -->
+  <main>
+    <!-- REAL CONTACT FORM -->
+    <div class="content-box">
+      <div class="content-title">📝 POŠALJI NAM PORUKU</div>
+      <p style="font-family:'Comic Sans MS',cursive;font-size:13px;color:#555;margin-bottom:10px;">
+        Popunite formu ispod i potrudićemo se da odgovorimo... kad tad.
+      </p>
+
+      <form class="scam-form" onsubmit="handleContactSubmit(event)">
+        <label for="name">IME I PREZIME *</label>
+        <input type="text" id="name" placeholder="Kako se zoveš?">
+
+        <label for="email">E-MAIL *</label>
+        <input type="email" id="email" placeholder="tvoj@email.com">
+
+        <label for="phone">BROJ TELEFONA</label>
+        <input type="tel" id="phone" placeholder="06X/XXXXXXX">
+
+        <label for="reason">RAZLOG KONTAKTA</label>
+        <select id="reason">
+          <option>-- IZABERI --</option>
+          <option>Želim da rezervišem svirku</option>
+          <option>Želim da budem član benda</option>
+          <option>Imam žalbu</option>
+          <option>Imam pohvalu</option>
+          <option>Samo sam htela/hteo da se javim</option>
+          <option>Tražim pare (nemoj)</option>
+          <option>Ostalo / Nemam pojma</option>
+        </select>
+
+        <label for="message">PORUKA *</label>
+        <textarea id="message" rows="4" placeholder="Piši šta ti je na srcu..."></textarea>
+
+        <br>
+        <button type="submit" class="aero-btn aero-btn-gold" style="margin-top:10px;">📨 POŠALJI PORUKU</button>
+        <span class="fake-scam-badge" style="margin-left:8px;">BESPLATNO</span>
+      </form>
+      <div id="contact-result" style="margin-top:10px;"></div>
+    </div>
+
+    <!-- FAKE PAYMENT FORM (THE JOKE) -->
+    <div class="content-box" style="background:#FFFFE1;box-shadow:6px 6px 0 #FFD700;border-color:#FFD700;">
+      <div class="content-title" style="color:#B8960F;text-shadow:3px 3px 0 #000;font-size:20px;">💳 PREMIUM KONTAKT — UPLATI 100€ I DOBIJ ODGOVOR ODMAH!*</div>
+      <p style="font-family:'Comic Sans MS',cursive;font-size:13px;color:#555;margin-bottom:10px;">
+        Za one koji žele <strong>VIP tretman</strong>, unesite podatke kartice ispod. Garantujemo odgovor u roku od <span class="blink-fast" style="color:#FF0000;">5 SEKUNDI</span>!
+      </p>
+
+      <form class="scam-form" onsubmit="handleScamSubmit(event)">
+        <label>BROJ KREDITNE KARTICE</label>
+        <input type="text" class="credit-card-input" id="cc-number" placeholder="1234-5678-9012-3456" maxlength="19">
+
+        <label>DATUM ISTEKA</label>
+        <input type="text" id="cc-expiry" placeholder="MM/GG" maxlength="5" style="width:120px;">
+
+        <label>CVV KOD</label>
+        <input type="text" id="cc-cvv" placeholder="XXX" maxlength="3" style="width:80px;">
+
+        <label>IME NA KARTICI</label>
+        <input type="text" id="cc-name" placeholder="Ime Prezime">
+
+        <br>
+        <button type="submit" class="aero-btn aero-btn-gold" style="margin-top:10px;">💳 UPLATI 100€</button>
+      </form>
+      <div id="scam-result" style="margin-top:10px;"></div>
+      <p style="font-size:9px;color:#808080;margin-top:8px;">*100% sigurno! Vaši podaci su bezbedni kod nas. (Šalimo se, ovo je šala. Nemojte stvarno unositi broj kartice!!!!!!)</p>
+    </div>
+
+    <!-- DIRECT LINKS -->
+    <div class="content-box" style="text-align:center;">
+      <div class="content-title" style="font-size:20px;">🔗 DIREKTNI LINKOVI</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+        <a href="https://www.instagram.com/visvrljika/" target="_blank" class="aero-btn" style="background:linear-gradient(180deg,#E1306C,#C13584,#833AB4);">📷 INSTAGRAM</a>
+        <a href="https://www.facebook.com/VokalnoInstrumentalniSastavVrljika" target="_blank" class="aero-btn" style="background:linear-gradient(180deg,#1877F2,#0D5FBF);">📘 FACEBOOK</a>
+        <a href="mailto:visvrljika@gmail.com" class="aero-btn" style="background:linear-gradient(180deg,#EA4335,#C5221F);">📧 E-MAIL</a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="xp-dialog">
+      <div class="xp-dialog-titlebar">
+        <span>❓ ČESTO POSTAVLJANA PITANJA (FAQ)</span>
+        <span>❔</span>
+      </div>
+      <div class="xp-dialog-body" style="font-size:12px;">
+        <p><strong>P: Koliko košta svirka?</strong><br>O: Zavisi. Pišite nam.</p>
+        <p><strong>P: Da li putujete van GM-a?</strong><br>O: Da, ako imate prevoz.</p>
+        <p><strong>P: Mogu li da se pridružim bendu?</strong><br>O: Možeš, ali ne garantujemo kvalitet.</p>
+        <p><strong>P: Kada izlazi novi album?</strong><br>O: Dobro pitanje. I mi se to pitamo.</p>
+        <p><strong>P: Da li je ovaj sajt ozbiljan?</strong><br>O: Apsolutno ne.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- RIGHT SIDEBAR -->
+  <aside>
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">🛡️ GARANCIJA BEZBEDNOSTI</div>
+      <div style="padding:8px;font-size:11px;text-align:center;">
+        <p>🔒 Vaši podaci su sigurni!</p>
+        <div style="font-size:8px;color:#808080;margin-top:4px;line-height:1.5;">
+          <p>*ne prikupljamo podatke</p>
+          <p>*forma za karticu je šala</p>
+          <p>*molimo ne unosite prave brojeve</p>
+          <p>*ozbiljno, šalimo se</p>
+          <p>*nismo hakeri, mi sviramo</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">📍 MAPA</div>
+      <div style="padding:8px;text-align:center;">
+        <pre style="font-family:'Courier New',monospace;font-size:9px;line-height:1.2;color:#000;background:#E8F4E8;padding:8px;">   Gornji Milanovac
+      📍📍📍
+    🏔️🏔️🏔️
+   🏠🏠🎸🏠
+    🏠🏠🏠
+     🌳🌳🌳</pre>
+        <p style="font-size:9px;color:#808080;">(nismo mogli da ugradimo Google Maps)</p>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>© 2023-2026 VIS Vrljika | Kontaktirajte nas — odgovaramo... nekad.</p>
+  <p style="font-size:9px;margin-top:4px;">Nijedna poruka nije ignorisana. Samo još nije stigao odgovor. Strpljenje. ❤️</p>
+</footer>
+
+<script>
+  // Countdown
+  (function(){var t=299;var el=document.getElementById('countdown');setInterval(function(){var m=Math.floor(t/60);var s=t%60;el.textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');t--;if(t<0)t=299},1000)})();
+
+  // Handle real contact form
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value || 'Anonimac';
+    var result = document.getElementById('contact-result');
+    result.innerHTML = '<div style="background:#E8F4E8;border:3px solid #00AA00;padding:12px;font-family:Impact,sans-serif;font-size:16px;color:#00AA00;text-align:center;">✅ PORUKA POSLATA! (Ne stvarno, ali hvala ti ' + name + '! Piši nam na visvrljika@gmail.com za pravi kontakt. ❤️)</div>';
+    setTimeout(function(){ result.innerHTML = ''; }, 6000);
+    return false;
+  }
+
+  // Handle SCAM credit card form (THE JOKE)
+  function handleScamSubmit(e) {
+    e.preventDefault();
+    var result = document.getElementById('scam-result');
+    var number = document.getElementById('cc-number').value.trim();
+
+    // Dramatic pause
+    result.innerHTML = '<div style="background:#FFEEEE;border:3px solid #FF0000;padding:12px;font-family:Impact,sans-serif;font-size:14px;color:#FF0000;text-align:center;animation:blink-hard 0.3s steps(2) 3;">⚠️ OBRADA TRANSAKCIJE... ⚠️</div>';
+
+    setTimeout(function() {
+      if (number.length > 3) {
+        result.innerHTML = '<div style="background:#FFEEEE;border:3px solid #FF0000;padding:12px;text-align:center;">' +
+          '<p style="font-family:Impact,sans-serif;font-size:20px;color:#FF0000;">🚨 PREVARA! 🚨</p>' +
+          '<p style="font-family:\'Comic Sans MS\',cursive;font-size:15px;color:#000;margin:10px 0;">ČEK, jesi li ti stvarno uneo/la broj kartice???</p>' +
+          '<p style="font-family:\'Times New Roman\',serif;font-size:13px;color:#555;">Brate/sestro, ovo je bend iz Gornjeg Milanovca. Mi sviramo muziku, ne krademo pare. 😂</p>' +
+          '<p style="font-family:\'Comic Sans MS\',cursive;font-size:14px;color:#00AA00;margin:10px 0;">Tvoji podaci su "bezbedni" jer ih NIKADA nismo ni poslali nigde. Ovo je bila samo šala na račun scam sajtova.</p>' +
+          '<p style="font-family:Impact,sans-serif;font-size:13px;color:#FF00FF;">Pouka: Ne unosite broj kartice na random sajtovima. ❤️</p>' +
+          '<p style="font-family:\'Times New Roman\',serif;font-size:11px;color:#808080;margin-top:8px;">Ali hvala što si probao/la! Pošalji nam pravi mail na visvrljika@gmail.com</p>' +
+          '</div>';
+      } else {
+        result.innerHTML = '<div style="background:#FFFFE1;border:3px solid #FFD700;padding:12px;text-align:center;">' +
+          '<p style="font-family:Impact,sans-serif;font-size:16px;color:#B8960F;">DOBRA VEST!</p>' +
+          '<p style="font-family:\'Comic Sans MS\',cursive;font-size:14px;color:#000;">Nisi uneo/la broj kartice. To znači da si pametan/pametna i da ne nasedaš na prevare! 🧠</p>' +
+          '<p style="font-family:\'Times New Roman\',serif;font-size:12px;color:#555;">Ali pošto si stigao/la dovde — evo ti <a href="music.html" style="color:#FF00FF;font-weight:bold;">BESPLATNA MUZIKA</a> kao nagrada. ❤️</p>' +
+          '</div>';
+      }
+    }, 2500);
+    return false;
+  }
+
+  // Cursor trail
+  (function(){var e=['📧','💌','📱','📞','✉️','💬','📨','📩'];var l=0;document.addEventListener('mousemove',function(ev){var n=Date.now();if(n-l<100)return;l=n;var t=document.createElement('div');t.style.cssText='position:fixed;pointer-events:none;z-index:99999;font-size:20px;transition:none;';t.textContent=e[Math.floor(Math.random()*e.length)];t.style.left=(ev.pageX-10)+'px';t.style.top=(ev.pageY-10)+'px';document.body.appendChild(t);var o=1;var f=setInterval(function(){o-=0.1;t.style.opacity=o;if(o<=0){clearInterval(f);t.remove()}},50)})})();
+
+  console.log('%c📞 %cKONTAKT — VIS VRLJIKA %c| %cNe unosite prave brojeve kartica. Hvala.','font-size:20px','color:#FF00FF','','color:#00FF00');
+</script>
+
+<!-- ================================================================== -->
+<!-- =========================== POPUPS =============================== -->
+<!-- ================================================================== -->
+
+<!-- POPUP: CONGRATULATIONS (WIN) -->
+<div class="popup-overlay hidden" id="popup-win">
+  <div class="scam-popup">
+    <div class="scam-popup-header">🎉 ČESTITAMO! 🎉<button class="scam-popup-close" onclick="closePopup('popup-win')">✕</button></div>
+    <div class="scam-popup-body">
+      <p style="font-size:20px;font-weight:bold;color:#FF00FF;font-family:Impact,sans-serif;">VI STE 999.999-TI POSETILAC!</p>
+      <p style="font-size:24px;margin:10px 0;">🏆</p>
+      <p>Osvojili ste <strong style="font-size:18px;color:#FF0000;">BESPLATNU</strong> Vrljika majicu!</p>
+      <p style="font-size:11px;color:#FF0000;margin:4px 0;">Kliknite dugme ispod da preuzmete nagradu!</p>
+      <div id="win-reveal" style="min-height:20px;"></div>
+      <button onclick="winReveal()" class="aero-btn aero-btn-gold" style="margin:10px 0;">PREUZMI NAGRADU!</button>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP: VIRUS ALERT -->
+<div class="popup-overlay hidden" id="popup-virus">
+  <div class="scam-popup" style="border-color:#FF0000;box-shadow:0 0 40px #FF0000;">
+    <div class="scam-popup-header" style="background:linear-gradient(180deg,#FF0000,#880000);">⚠️ VIRUS DETECTED! ⚠️<button class="scam-popup-close" onclick="closePopup('popup-virus')">✕</button></div>
+    <div class="scam-popup-body" id="virus-popup-body">
+      <p style="font-size:16px;font-weight:bold;color:#FF0000;">VAŠ RAČUNAR JE ZARAŽEN!</p>
+      <div class="scam-progress" style="width:90%;margin:10px auto;"><div class="scam-progress-fill" id="virus-progress-bar" style="width:0%;"></div><div class="scam-progress-text" id="virus-progress-text">SKENIRANJE... 0%</div></div>
+      <p id="virus-status" style="font-family:'Courier New',monospace;font-size:11px;color:#FF0000;"></p>
+      <div id="virus-disclaimer" style="min-height:16px;"></div>
+      <button onclick="closePopup('popup-virus')" class="xp-btn" style="margin-top:10px;font-family:Tahoma,sans-serif;font-size:12px;padding:4px 16px;">OK</button>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP: FREE MONEY (NO CARD INPUT - FAKE NUMBER DISPLAYED) -->
+<div class="popup-overlay hidden" id="popup-free">
+  <div class="scam-popup gold">
+    <div class="scam-popup-header">💰 BESPLATAN NOVAC 💰<button class="scam-popup-close" onclick="closePopup('popup-free')">✕</button></div>
+    <div class="scam-popup-body">
+      <p style="font-size:18px;font-weight:bold;color:#000;">Čestitamo! Odobrena vam je isplata od <span style="color:#FF0000;font-size:22px;">1.000€</span>!</p>
+      <p style="font-size:13px;color:#555;margin:8px 0;">Vaša virtuelna kartica za isplatu:</p>
+      <div class="fake-card-display">4532-XXXX-XXXX-7890</div>
+      <p style="font-size:11px;color:#FF0000;margin:8px 0;">Kliknite dugme ispod da potvrdite isplatu!</p>
+      <div id="free-reveal" style="min-height:20px;"></div>
+      <button onclick="freeReveal()" class="aero-btn" style="margin-top:10px;">💸 POTVRDI ISPLATU 💸</button>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP: NIGERIAN PRINCE -->
+<div class="popup-overlay hidden" id="popup-nigerian">
+  <div class="scam-popup gold">
+    <div class="scam-popup-header" style="background:linear-gradient(180deg,#006600,#003300);">👑 HITNO! NASLEDSTVO! 👑<button class="scam-popup-close" onclick="closePopup('popup-nigerian')">✕</button></div>
+    <div class="scam-popup-body">
+      <p style="font-size:24px;">🤴🏿</p>
+      <p style="font-size:16px;font-weight:bold;">Poštovani,</p>
+      <p>Ja sam <strong>Princ Mbeke iz Nigerije</strong> i imam <strong style="color:#FF0000;font-size:18px;">$45.000.000</strong> za Vas!</p>
+      <p style="font-size:11px;color:#FF0000;margin-top:6px;">Samo nam pošaljite 500€ za administrativne troškove i novac je Vaš!</p>
+      <div id="nigerian-reveal" style="min-height:20px;"></div>
+      <button onclick="nigerianReveal()" class="aero-btn aero-btn-gold" style="margin-top:10px;font-size:16px;">💸 POŠALJI 500€ 💸</button>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP: SURVEY -->
+<div class="popup-overlay hidden" id="popup-survey">
+  <div class="scam-popup blue">
+    <div class="scam-popup-header">📋 ISTRAŽIVANJE — OSVOJI NAGRADU!<button class="scam-popup-close" onclick="closePopup('popup-survey')">✕</button></div>
+    <div class="scam-popup-body">
+      <p style="font-weight:bold;">Odgovorite na JEDNO pitanje i osvojite iPhone 15!*</p>
+      <p style="font-size:14px;margin:10px 0;">Da li volite VIS Vrljiku?</p>
+      <button onclick="surveyAnswer('da')" class="aero-btn aero-btn-green" style="margin:4px;">✅ DA, OBOŽAVAM!</button>
+      <button onclick="surveyAnswer('ne')" class="aero-btn aero-btn-red" style="margin:4px;">❌ NE</button>
+      <div id="survey-result" style="margin-top:10px;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP: WINDOWS UPDATE -->
+<div class="popup-overlay hidden" id="popup-update">
+  <div class="scam-popup blue">
+    <div class="scam-popup-header">🪟 KRITIČNO AŽURIRANJE<button class="scam-popup-close" onclick="closePopup('popup-update')">✕</button></div>
+    <div class="scam-popup-body">
+      <p style="font-size:16px;font-weight:bold;">Windows zahteva HITNO ažuriranje!</p>
+      <div class="scam-progress" style="width:90%;margin:10px auto;" id="update-progress-container"><div class="scam-progress-fill" style="width:0%;" id="update-progress-bar"></div><div class="scam-progress-text" id="update-progress-text">0% završeno</div></div>
+      <p style="font-size:11px;color:#FF0000;">Ne gasite računar!</p>
+      <p id="update-result" style="font-size:12px;margin-top:8px;"></p>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP: DOWNLOAD READY -->
+<div class="popup-overlay hidden" id="popup-download">
+  <div class="scam-popup green">
+    <div class="scam-popup-header">✅ VAŠ DOWNLOAD JE SPREMAN!<button class="scam-popup-close" onclick="closePopup('popup-download')">✕</button></div>
+    <div class="scam-popup-body">
+      <p style="font-size:16px;font-weight:bold;">Hvala na strpljenju!</p>
+      <p>Vaš fajl <strong>"album_vrljika_2025.zip"</strong> (1.6 GB) je spreman.</p>
+      <p style="font-size:13px;color:#FF0000;margin:10px 0;">⚠️ Samo još jedan klik!</p>
+      <button onclick="downloaderReveal()" class="aero-btn aero-btn-gold" style="margin:8px;">PREUZMI FAJL</button>
+      <div id="download-reveal" style="margin-top:10px;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP: HOT SINGLES -->
+<div class="popup-overlay hidden" id="popup-hot">
+  <div class="scam-popup" style="border-color:#FF69B4;box-shadow:0 0 40px #FF69B4;">
+    <div class="scam-popup-header" style="background:linear-gradient(180deg,#FF69B4,#FF1493);">🔥 HOT SINGLES U TVOJOJ OKOLINI 🔥<button class="scam-popup-close" onclick="closePopup('popup-hot')">✕</button></div>
+    <div class="scam-popup-body">
+      <p style="font-size:32px;">💃🕺</p>
+      <p style="font-size:16px;">5 zgodnih osoba u Gornjem Milanovcu želi da te upozna!</p>
+      <p style="font-size:13px;color:#808080;">Klikni da vidiš ko su...</p>
+      <button onclick="hotSinglesReveal()" class="aero-btn" style="background:linear-gradient(180deg,#FF69B4,#FF1493);margin:8px;">VIDI KO SU 🔥</button>
+      <div id="hot-result" style="margin-top:10px;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP: YOU'VE WON AGAIN -->
+<div class="popup-overlay hidden" id="popup-won-again">
+  <div class="scam-popup gold">
+    <div class="scam-popup-header">🎰 PONOVO STE POBEDILI! 🎰<button class="scam-popup-close" onclick="closePopup('popup-won-again')">✕</button></div>
+    <div class="scam-popup-body">
+      <p style="font-size:18px;font-weight:bold;">Neverovatno! Opet ste izvukli dobitnu kombinaciju!</p>
+      <p style="font-size:24px;">🎁🎁🎁</p>
+      <p>Ovog puta ste osvojili... <strong style="color:#FF00FF;">TAJNU NAGRADU!</strong></p>
+      <p style="font-size:11px;color:#FF0000;">Kliknite da otključate nagradu ⬇</p>
+      <div id="wonagain-reveal" style="min-height:20px;"></div>
+      <button onclick="wonAgainReveal()" class="aero-btn aero-btn-gold" style="margin-top:10px;">🎁 OTKLJUČAJ NAGRADU 🎁</button>
+    </div>
+  </div>
+</div>
+
+<!-- ====== POPUP SCRIPTS ====== -->
+<script>
+// ===== POPUP HELPERS =====
+function openPopup(id) { document.getElementById(id).classList.remove('hidden'); }
+function closePopup(id) { document.getElementById(id).classList.add('hidden'); }
+
+// Close popup on overlay click
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('popup-overlay')) {
+    e.target.classList.add('hidden');
+  }
+});
+
+// ===== POPUP REVEAL RESET =====
+var origOpenPopup=openPopup;
+openPopup=function(id){
+  var reveals=['win-reveal','free-reveal','nigerian-reveal','wonagain-reveal','survey-result','download-reveal','hot-result','virus-disclaimer','update-result'];
+  for(var i=0;i<reveals.length;i++){
+    var el=document.getElementById(reveals[i]);
+    if(el)el.innerHTML='';
+  }
+  var vb=document.getElementById('virus-progress-bar');
+  if(vb){vb.style.width='0%';vb.style.background='repeating-linear-gradient(90deg, #00AA00, #00AA00 10px, #00CC00 10px, #00CC00 20px)';}
+  var vt=document.getElementById('virus-progress-text');
+  if(vt)vt.textContent='SKENIRANJE... 0%';
+  var vs=document.getElementById('virus-status');
+  if(vs)vs.textContent='';
+  origOpenPopup(id);
+};
+
+// ===== VIRUS SCAN =====
+var virusInterval=null;
+function startVirusScan(){
+  closePopup('popup-virus');
+  setTimeout(function(){openPopup('popup-virus')},100);
+  var bar=document.getElementById('virus-progress-bar');
+  var txt=document.getElementById('virus-progress-text');
+  var status=document.getElementById('virus-status');
+  var progress=0;
+  status.textContent='Pokrećem skeniranje...';
+  if(virusInterval)clearInterval(virusInterval);
+  virusInterval=setInterval(function(){
+    progress+=Math.floor(Math.random()*8)+4;
+    if(progress>100)progress=100;
+    bar.style.width=progress+'%';
+    txt.textContent='SKENIRANJE... '+progress+'%';
+    var threats=['⚠️ trojan.exe','⚠️ spyware.dll','⚠️ keylogger.sys','⚠️ Vrljika_virus.mp3','✅ system32 (OK)'];
+    if(progress<100&&Math.random()>0.5)status.textContent='PRONAĐENO: '+threats[Math.floor(Math.random()*threats.length)];
+    if(progress>=100){clearInterval(virusInterval);
+      bar.style.background='#FF0000';
+      txt.textContent='SKENIRANJE ZAVRŠENO — 420 PRETNJI!';
+      status.innerHTML='<span style="color:#FF0000;font-size:14px;">⚠️ VAŠ UREĐAJ JE KRITIČNO UGROŽEN!</span>';
+      setTimeout(function(){status.innerHTML='<span style="color:#00FF00;font-size:14px;">😂 ŠALIMO SE! Nismo hakeri, mi smo bend iz GM-a. Tvoj računar je bezbedan. Ali muzički ukus... diskutabilno.</span>';bar.style.background='repeating-linear-gradient(90deg, #00AA00, #00AA00 10px, #00CC00 10px, #00CC00 20px)';txt.textContent='✅ SVE JE U REDU — ŠALILI SMO SE ✅';var disc=document.getElementById('virus-disclaimer');if(disc)disc.innerHTML='<p style="font-size:10px;color:#808080;margin-top:4px;">*ne brinite, mi smo bend. ne pravimo viruse. pravimo buku.</p>';},2000);}
+  },300);
+}
+
+// ===== REVEAL FUNCTIONS =====
+function winReveal(){
+  var r=document.getElementById('win-reveal');
+  r.innerHTML='<div style="background:#FFEEEE;border:2px solid #FF0000;padding:10px;margin-top:8px;"><p style="font-size:17px;color:#FF0000;font-family:Impact,sans-serif;">😂 NEMA MAJICE!</p><p style="font-size:13px;color:#555;">Majica ne postoji. Ali entuzijazam postoji! ❤️<br>Mi smo bend iz GM-a, ne modna kuća.</p><p style="font-size:12px;color:#00AA00;margin-top:6px;">Utešna nagrada: <a href="music.html" style="color:#FF00FF;font-weight:bold;">BESPLATNA MUZIKA</a>!</p></div>';
+  event.target.textContent='RAZUMEM... 😔';
+  event.target.onclick=function(){closePopup('popup-win')};
+}
+
+function freeReveal(){
+  var r=document.getElementById('free-reveal');
+  r.innerHTML='<div style="background:#FFEEEE;border:2px solid #FF0000;padding:10px;margin-top:8px;"><p style="font-size:17px;color:#FF0000;font-family:Impact,sans-serif;">😂 PREVARENI STE!</p><p style="font-size:13px;color:#555;">Sredstva nikada neće biti prebačena. Jer mi nemamo pare. Mi smo bend iz Gornjeg Milanovca.</p><p style="font-size:12px;color:#00AA00;margin-top:6px;">Ali evo ti <a href="music.html" style="color:#FF00FF;font-weight:bold;">BESPLATNA MUZIKA</a>! ❤️</p></div>';
+  event.target.textContent='RAZUMEM, IDEMO DALJE';
+  event.target.onclick=function(){closePopup('popup-free')};
+}
+
+function nigerianReveal(){
+  var r=document.getElementById('nigerian-reveal');
+  r.innerHTML='<div style="background:#FFEEEE;border:2px solid #FF0000;padding:10px;margin-top:8px;"><p style="font-size:20px;color:#FF0000;font-family:Impact,sans-serif;">🚨 POGAĐATE — PREVARA! 🚨</p><p style="font-size:13px;color:#555;">Ovo je klasična "Nigerian Prince" prevara.</p><p style="font-size:14px;color:#00AA00;font-weight:bold;">Da li biste stvarno naseli? 😂</p><p style="font-size:11px;color:#808080;margin-top:4px;">Ako da — hvala što ste na našom sajtu gde učite o internet prevarama. Ako ne — svaka čast!</p><p style="font-size:12px;color:#FF00FF;margin-top:6px;">VIS Vrljika — edukujemo kroz humor ❤️</p></div>';
+  event.target.textContent='HVALA NA LEKCIJI 📚';
+  event.target.onclick=function(){closePopup('popup-nigerian')};
+}
+
+function wonAgainReveal(){
+  var r=document.getElementById('wonagain-reveal');
+  r.innerHTML='<div style="background:#FFFFE1;border:2px solid #FFD700;padding:10px;margin-top:8px;"><p style="font-size:17px;color:#B8960F;font-family:Impact,sans-serif;">🏆 TAJNA NAGRADA:</p><p style="font-size:15px;font-weight:bold;color:#000;">NAŠE VEČNO POŠTOVANJE!</p><p style="font-size:11px;color:#808080;">Jedina nagrada koju imamo na lageru.</p><p style="font-size:12px;color:#FF00FF;">Ali iskreno — hvala ti što si tu! ❤️</p></div>';
+  event.target.textContent='HVALA, PONOSAN SAM! 🫡';
+  event.target.onclick=function(){closePopup('popup-won-again')};
+}
+
+function surveyAnswer(a) {
+  var r=document.getElementById('survey-result');
+  if(a==='da')r.innerHTML='<p style="color:#00AA00;font-size:16px;font-weight:bold;">✅ HVALA! Osvojili ste... iPhone 15!*</p><p style="font-size:9px;">*iPhone 15 je metafora za našu zahvalnost. Ne šaljemo telefone. Mi sviramo muziku.</p>';
+  else r.innerHTML='<p style="color:#FF0000;font-size:14px;">😢 Šteta. Ali i dalje vas volimo. ❤️</p>';
+}
+
+function downloaderReveal(){
+  var r=document.getElementById('download-reveal');
+  r.innerHTML='<div style="background:#FFEEEE;border:2px solid #FF0000;padding:10px;margin-top:8px;"><p style="font-size:14px;color:#FF0000;">😂 NEMA FAJLA! Ali evo ti naša <a href="music.html" style="color:#FF00FF;font-weight:bold;">diskografija</a>. Pregledaj cover art i zamisli muziku. ❤️</p></div>';
+}
+
+function hotSinglesReveal(){
+  var r=document.getElementById('hot-result');
+  r.innerHTML='<div style="background:#FFEEFF;border:2px solid #FF69B4;padding:10px;"><p style="font-size:18px;">🎸🥁🎤🎹🎸🎸</p><p style="font-family:Impact,sans-serif;font-size:14px;color:#FF1493;">TO SU ČLANOVI BENDA!</p><p style="font-size:12px;color:#555;">Šest dobrih ljudi iz GM-a. Nisu "singles" u onom smislu. Ali su muzički singlovi — to sigurno! 😂</p></div>';
+}
+
+function startWindowsUpdate(){
+  if(document.getElementById('popup-update').classList.contains('hidden')){
+    openPopup('popup-update');
+    var bar=document.getElementById('update-progress-bar');
+    var txt=document.getElementById('update-progress-text');
+    var result=document.getElementById('update-result');
+    var p=0;
+    bar.style.width='0%';
+    result.innerHTML='';
+    var intv=setInterval(function(){
+      p+=Math.floor(Math.random()*10)+5;
+      if(p>100)p=100;
+      bar.style.width=p+'%';
+      txt.textContent=p+'% završeno';
+      if(p>=100){clearInterval(intv);result.innerHTML='<p style="color:#00AA00;">✅ Ažuriranje završeno!<br><span style="font-size:11px;">(Šalimo se, nismo ažurirali ništa. Ali restartuj računar, ne škodi.)</span></p>';}
+    },500);
+  }
+}
+
+// ===== POPUP SISTEM (svaki 5. klik, resetuje se nakon zatvaranja) =====
+var allPopups=['popup-win','popup-free','popup-nigerian','popup-survey','popup-download','popup-hot','popup-won-again'];
+var brojKlikova=0;
+var popupOtvoren=false;
+
+document.addEventListener('click',function(e){
+  if(popupOtvoren)return;
+  brojKlikova++;
+  if(brojKlikova>=5){
+    brojKlikova=0;
+    popupOtvoren=true;
+    for(var i=0;i<allPopups.length;i++){document.getElementById(allPopups[i]).classList.add('hidden')}
+    var randomId=allPopups[Math.floor(Math.random()*allPopups.length)];
+    openPopup(randomId);
+  }
+});
+
+// Override closePopup da resetuje brojač
+var origClosePopup2=closePopup;
+closePopup=function(id){
+  origClosePopup2(id);
+  popupOtvoren=false;
+  brojKlikova=0;
+};
+</script>
+
+</body>
+</html>

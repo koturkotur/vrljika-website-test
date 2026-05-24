@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>🛸 DOSIJEI VRLJIKE — STROGO POVERLJIVO // SAMO ZA OČI</title>
+<style>
+  *{margin:0;padding:0}
+  body{background:#f0ead8;background-image:url("data:image/svg+xml,%3Csvg width='300' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ctext x='150' y='100' text-anchor='middle' font-family='Impact' font-size='38' fill='%23d4c9a8' transform='rotate(-25,150,100)'%3ESTROGO POVERLJIVO%3C/text%3E%3C/svg%3E");background-size:280px 180px;font-family:"Times New Roman",Georgia,serif;color:#1a1a1a;min-height:100vh;overflow-x:hidden;cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ctext y='22' font-size='20'%3E👽%3C/text%3E%3C/svg%3E") 0 0,auto}
+  @keyframes blink-hard{0%,100%{opacity:1}50%{opacity:0}}
+  @keyframes marquee{0%{transform:translateX(100vw)}100%{transform:translateX(-100%)}}
+  @keyframes marquee-rev{0%{transform:translateX(-100%)}100%{transform:translateX(100vw)}}
+  @keyframes ufo-hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+  .blink-fast{animation:blink-hard 0.4s steps(2) infinite}
+  .blink-slow{animation:blink-hard 1.5s steps(2) infinite}
+  .poverljivo-banner{background:#1a1a2e;color:#FFD700;font-family:"Courier New",monospace;font-size:12px;text-align:center;padding:5px 0;border-bottom:3px solid #8B0000;position:sticky;top:0;z-index:1000;letter-spacing:1px}
+  .marquee-wrap{overflow:hidden;white-space:nowrap;border-top:2px solid #1a1a2e;border-bottom:2px solid #1a1a2e;background:#fffef5;padding:4px 0;margin:0}
+  .marquee-inner{display:inline-block;animation:marquee 15s linear infinite}
+  .marquee-inner-rev{display:inline-block;animation:marquee-rev 10s linear infinite}
+  .marquee-text{font-family:"Comic Sans MS",cursive;font-size:14px;font-weight:bold;color:#1a1a2e}
+  .zaglavlje{background:linear-gradient(180deg,#1a1a2e,#2d2d44,#1a1a2e);text-align:center;padding:18px 10px 14px;border-bottom:4px double #FFD700;position:relative}
+  .naslov{font-family:"Courier New","American Typewriter",monospace;font-size:44px;color:#FFD700;text-shadow:3px 3px 0 #000,0 0 20px rgba(255,215,0,0.4);letter-spacing:4px;text-transform:uppercase;margin:0}
+  .podnaslov{font-family:"Courier New",monospace;font-size:12px;color:#8899aa;letter-spacing:2px;margin-top:4px}
+  .nav-bar{background:#fffef5;border:3px solid #1a1a2e;border-left:none;border-right:none;text-align:center;padding:4px 0}
+  .nav-bar a{display:inline-block;font-family:"Courier New",monospace;font-size:13px;color:#1a1a2e;text-decoration:none;background:#f5f0e0;padding:7px 14px;border:2px solid #1a1a2e;margin:3px 2px;box-shadow:3px 3px 0 #1a1a2e;transition:none;font-weight:bold}
+  .nav-bar a:hover{background:#FFD700;box-shadow:1px 1px 0 #1a1a2e;transform:translate(2px,2px)}
+  .main-grid{display:grid;grid-template-columns:200px 1fr 200px;gap:12px;max-width:1150px;margin:12px auto;padding:0 8px}
+  .redacted{background:#000;color:#000;padding:0 4px;cursor:pointer;display:inline-block}
+  .redacted:hover{color:#FFD700;background:#333}
+  .pecat{display:inline-block;font-family:Impact,"Arial Black",sans-serif;font-size:16px;color:#8B0000;border:3px solid #8B0000;padding:4px 12px;text-transform:uppercase;transform:rotate(-5deg);opacity:0.8;margin:8px;background:rgba(255,255,240,0.8)}
+  .dokument{background:#fffef5;border:3px solid #1a1a2e;box-shadow:5px 5px 0 rgba(26,26,46,0.3);padding:16px;margin-bottom:12px;position:relative;font-size:14px;line-height:1.7;color:#1a1a1a}
+  .dokument::before{content:"";position:absolute;top:-3px;left:-3px;right:-3px;bottom:-3px;border:1px dashed #8B0000;pointer-events:none;z-index:1}
+  .dok-naslov{font-family:"Courier New","American Typewriter",monospace;font-size:22px;font-weight:bold;color:#1a1a2e;border-bottom:3px double #1a1a2e;padding-bottom:6px;margin-bottom:10px;letter-spacing:2px}
+  .ref-broj{font-family:"Courier New",monospace;font-size:10px;color:#666;text-align:right;margin-top:-6px;margin-bottom:10px}
+  .sidebar-kartica{background:#fffef5;border:2px solid #1a1a2e;box-shadow:3px 3px 0 rgba(26,26,46,0.3);margin-bottom:8px;font-size:12px;color:#1a1a1a}
+  .sidebar-zaglavlje{background:linear-gradient(180deg,#1a1a2e,#2d2d44);color:#FFD700;font-weight:bold;font-size:12px;padding:4px 8px;font-family:"Courier New",monospace;letter-spacing:1px}
+  .dugme{display:inline-block;font-family:"Courier New",monospace;font-size:13px;font-weight:bold;color:#1a1a2e;background:#f5f0e0;border:2px solid #1a1a2e;padding:8px 20px;cursor:pointer;text-decoration:none;box-shadow:4px 4px 0 #1a1a2e;transition:none;margin:4px}
+  .dugme:hover{background:#FFD700;box-shadow:2px 2px 0 #1a1a2e;transform:translate(2px,2px)}
+  .dugme.alert{color:#8B0000;border-color:#8B0000;box-shadow:4px 4px 0 #8B0000}
+  .nit{background:rgba(255,0,0,0.03);border-left:4px solid #FF0000;padding:8px 12px;margin:8px 0;font-family:"Comic Sans MS",cursive;font-size:13px;color:#333}
+  .novinski-isecak{background:#f8f4e8;border:1px solid #d4c9a8;padding:10px;font-family:"Times New Roman",serif;font-size:13px;line-height:1.6;column-count:2;column-gap:16px;margin:8px 0}
+  .novinski-isecak h4{font-family:Georgia,serif;font-size:16px;text-align:center;border-bottom:2px solid #1a1a1a;padding-bottom:4px;margin-bottom:8px;column-span:all}
+  .futer{background:#1a1a2e;color:#8899aa;font-family:"Courier New",monospace;font-size:11px;text-align:center;padding:16px;border-top:3px solid #FFD700;margin-top:20px}
+  /* --- POPUP (CONSPIRACY TEMA) --- */
+  .popup-zavesa{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:10000;display:flex;align-items:center;justify-content:center}
+  .popup-zavesa.skriven{display:none!important}
+  .popup-prozor{background:#fffef5;border:4px double #8B0000;box-shadow:0 0 50px rgba(139,0,0,0.4),0 0 100px rgba(255,215,0,0.2);max-width:480px;width:90%;text-align:center;position:relative;max-height:85vh;overflow-y:auto;animation:ufo-hover 2s steps(4) 1}
+  .popup-prozor.alert-zelena{border-color:#006600;box-shadow:0 0 50px rgba(0,102,0,0.4)}
+  .popup-prozor.alert-zlatna{border-color:#FFD700;box-shadow:0 0 50px rgba(255,215,0,0.4)}
+  .popup-prozor.alert-plava{border-color:#0054E3;box-shadow:0 0 50px rgba(0,84,227,0.4)}
+  .popup-zaglavlje{background:linear-gradient(180deg,#8B0000,#4a0000);color:#FFD700;font-family:Impact,sans-serif;font-size:20px;padding:10px 36px 10px 16px;text-shadow:2px 2px 0 #000;letter-spacing:2px}
+  .popup-zaglavlje.zelena{background:linear-gradient(180deg,#006600,#003300)}
+  .popup-zaglavlje.zlatna{background:linear-gradient(180deg,#B8960F,#6B4F00);color:#000;text-shadow:1px 1px 0 #FFD700}
+  .popup-zaglavlje.plava{background:linear-gradient(180deg,#0A6EFF,#003BB3)}
+  .popup-zatvori{position:absolute;top:6px;right:8px;width:26px;height:26px;background:linear-gradient(180deg,#FF8C8C,#E81123 40%,#B3000F);color:#FFF;border:2px solid #FFF;border-radius:4px;font-size:16px;font-weight:bold;line-height:22px;text-align:center;cursor:pointer;font-family:Tahoma,sans-serif;z-index:2}
+  .popup-zatvori:hover{background:linear-gradient(180deg,#FFAAAA,#FF3333,#CC0000)}
+  .popup-telo{padding:16px;font-family:"Courier New",monospace;color:#1a1a1a;font-size:14px;line-height:1.7}
+  .popup-pecat{display:inline-block;font-family:Impact,sans-serif;font-size:13px;color:#8B0000;border:2px solid #8B0000;padding:3px 8px;transform:rotate(-3deg);margin:4px;background:rgba(255,240,240,0.9)}
+  @media(max-width:900px){.main-grid{grid-template-columns:1fr}.naslov{font-size:28px}.novinski-isecak{column-count:1}}
+</style>
+</head>
+<body>
+
+<div class="poverljivo-banner blink-slow">
+  █ █ █ STROGO POVERLJIV DOKUMENT — NEOVLAŠĆEN PRISTUP KAŽNJIV ZAKONOM █ █ █ &nbsp; ZAHTEV ZA PRISTUP INFORMACIJAMA #42069-X &nbsp; █ █ █
+</div>
+
+<div class="marquee-wrap" style="border-color:#8B0000;">
+  <div class="marquee-inner">
+    <span class="marquee-text" style="color:#8B0000;">⚠️ ISTINA JE TAMO NEGDE ⚠️ VLADA NE ŽELI DA ČUJETE OVAJ BEND ⚠️ PROBUDITE SE OVCE ⚠️ ONI ZNAJU ⚠️</span>
+  </div>
+</div>
+
+<header class="zaglavlje">
+  <div style="font-size:48px;animation:ufo-hover 3s steps(6) infinite;display:inline-block;">🛸</div>
+  <h1 class="naslov">DOSIJEI VRLJIKE</h1>
+  <p class="podnaslov">PREDMET BR. ███-VLK-2023 █ DEKLASIFIKOVANO: ██/██/2026 █ NIVO PRISTUPA: SIGMA-6 █</p>
+  <div style="margin-top:8px;">
+    <span class="pecat">STROGO POVERLJIVO</span>
+    <span class="pecat">SAMO ZA OČI</span>
+    <span class="pecat">BEZ STRANACA</span>
+  </div>
+</header>
+
+<nav class="nav-bar">
+  <a href="index.html">📁 GLAVNI DOSIJE</a>
+  <a href="about.html">👤 LIČNI DOSIJEI</a>
+  <a href="music.html">🔊 SIGNALI</a>
+  <a href="contact.html">📡 KONTAKT</a>
+  <a href="razonoda.html">🛸 ZONA 69</a>
+</nav>
+
+<div class="marquee-wrap" style="border-color:#006600;">
+  <div class="marquee-inner-rev">
+    <span class="marquee-text" style="color:#006600;">👽 VANZEMALJCI POTVRĐENI 👽 HODAJU MEĐU NAMA 👽 NEKI SVIRAJU INSTRUMENTE 👽 LOŠE 👽 SLUČAJNOST? 👽</span>
+  </div>
+</div>
+
+<div class="main-grid">
+
+  <aside>
+    <div class="sidebar-kartica">
+      <div class="sidebar-zaglavlje">📋 STATUS PREDMETA</div>
+      <div style="padding:8px;font-size:10px;line-height:1.8;font-family:'Courier New',monospace;">
+        <p>Predmet br: VLK-2023-06</p>
+        <p>Status: <span class="blink-fast" style="color:#8B0000;">AKTIVAN</span></p>
+        <p>Subjekti: 6</p>
+        <p>Nivo pretnje: <span style="color:#FFD700;">MUZIČKI</span></p>
+        <p>Klasifikacija: STROGO POVERLJIVO</p>
+      </div>
+    </div>
+
+    <div class="sidebar-kartica">
+      <div class="sidebar-zaglavlje">🛸 EVIDENCIJA DOKAZA</div>
+      <div style="padding:8px;font-size:10px;font-family:'Courier New',monospace;line-height:1.6;">
+        <p>📸 Dokaz A: oglas na bend.rs</p>
+        <p>📸 Dokaz B: Instagram @visvrljika</p>
+        <p>📸 Dokaz V: Facebook stranica</p>
+        <p>🎵 Dokaz G: audio snimci</p>
+        <p>👁️ Dokaz D: iskazi očevidaca</p>
+      </div>
+    </div>
+
+    <div class="sidebar-kartica">
+      <div class="sidebar-zaglavlje">🔗 POVEZANI SLUČAJEVI</div>
+      <div style="padding:8px;font-size:10px;font-family:'Courier New',monospace;line-height:1.6;">
+        <p>→ INCIDENT ZONA 51</p>
+        <p>→ ZAVERA U GM-U</p>
+        <p>→ HEMTREJLS IZNAD ČAČKA</p>
+        <p>→ KO JE STVARNO NAPRAVIO PIRAMIDE</p>
+        <p style="color:#666;">*svi dosijei još poverljivi</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin:8px 0;">
+      <svg width="60" height="60" viewBox="0 0 60 60">
+        <polygon points="30,2 55,48 5,48" fill="none" stroke="#FFD700" stroke-width="1.5"/>
+        <circle cx="30" cy="35" r="12" fill="none" stroke="#FFD700" stroke-width="1"/>
+        <circle cx="30" cy="35" r="5" fill="#FFD700" opacity="0.6"/>
+        <circle cx="30" cy="35" r="2" fill="#1a1a2e"/>
+      </svg>
+      <p style="font-size:8px;color:#666;font-family:'Courier New',monospace;">ONI GLEDAJU<br>(možda)</p>
+    </div>
+  </aside>
+
+  <main>
+    <div class="dokument" style="border-color:#8B0000;background:#fff8f8;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="font-size:40px;">⚠️</span>
+        <div>
+          <div class="dok-naslov" style="font-size:16px;color:#8B0000;">PRISTUP POVERLJIVOM MATERIJALU</div>
+          <p style="font-family:'Courier New',monospace;font-size:12px;">
+            PREGLEDATE DEKLASIFIKOVANA DOKUMENTA KOJA SE ODNOSE NA <strong>VOKALNO INSTRUMENTALNI SASTAV VRLJIKA</strong>.
+            <span class="blink-slow" style="color:#8B0000;">DELJENJE SE PODSTIČE.</span>
+          </p>
+          <p style="font-size:10px;color:#666;margin-top:4px;">
+            PRISTUP EVIDENTIRAN █ IP: <span class="redacted">███.███.███.███</span> █ LOKACIJA: <span class="redacted">███████████</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dokument">
+      <div class="dok-naslov">📄 DEKLASIFIKOVANI REZIME</div>
+      <div class="ref-broj">REF: VLK-REZ-001 █ DATUM: ██/██/2026</div>
+
+      <div style="font-family:'Courier New',monospace;background:#fdfaf0;border:1px solid #ccc;padding:12px;font-size:13px;line-height:1.8;box-shadow:inset 0 0 10px rgba(0,0,0,0.05);">
+        <p>SUBJEKAT: <strong>VIS Vrljika</strong></p>
+        <p>POREKLO: <strong>Gornji Milanovac, Republika Srbija</strong></p>
+        <p>SASTAV: <strong>Šest (6) pojedinaca promenljivog muzičkog umeća</strong></p>
+        <br>
+        <p>Nakon opsežne istrage, naša agencija je utvrdila da VIS Vrljika <strong>NIJE</strong> pretnja po nacionalnu bezbednost. Međutim, njihova muzika može da ugrozi:</p>
+        <p>— Konvencionalnu klasifikaciju žanrova</p>
+        <p>— Koncept "biti u štimu"</p>
+        <p>— Zdrav razum</p>
+        <br>
+        <p style="color:#8B0000;font-weight:bold;">PREPORUKA: Potrebno dalje slušanje. Iz naučnih razloga.</p>
+      </div>
+
+      <div style="text-align:center;margin-top:12px;">
+        <span class="pecat" style="transform:rotate(3deg);font-size:24px;padding:8px 20px;">DEKLASIFIKOVANO</span>
+      </div>
+    </div>
+
+    <div class="dokument">
+      <div class="dok-naslov">🕵️ ZAVERA — SPAJANJE TAČKICA</div>
+      <div class="ref-broj">REF: VLK-ZAV-042 █ ODELJAK: SIGMA</div>
+
+      <p style="font-size:14px;margin-bottom:12px;">
+        Zašto bi <strong>šestoro ljudi</strong> iz malog srpskog grada osnovalo bend koji svira
+        <strong>sve žanrove istovremeno</strong>? Šta kriju? Ko stoji iza ovoga? Pratite dokaze:
+      </p>
+
+      <div class="nit">
+        <strong>🧵 NIT: Enigma Vrljika</strong><br>
+        > Šest članova — isto koliko strana ima kocka. SLUČAJNOST?<br>
+        > "Vrljika" ima 7 slova — broj nota u muzičkoj lestvici. ISPLANIRANO?<br>
+        > Njihov Instagram ima preko 100 pratilaca. ORGANSKI RAST ili VLADINI BOTOVI?<br>
+        > Iz Gornjeg Milanovca su — grada čije ime sadrži reč "Milan". Svetska prestonica mode. POVEZANO?<br>
+        > Samo postavljam pitanja. PROBUDITE SE.
+      </div>
+
+      <div class="nit" style="border-left-color:#006600;">
+        <strong>🧵 NIT: Muzička kontrola uma</strong><br>
+        > Njihove pesme sadrže više žanrova istovremeno<br>
+        > Ovo zbunjuje centar za prepoznavanje žanrova u mozgu<br>
+        > Zbunjeni mozgovi su podložniji... nečemu<br>
+        > Još nisam otkrio čemu ali HOĆU<br>
+        > Samo sačekajte
+      </div>
+
+      <p style="font-size:10px;color:#666;text-align:center;margin-top:8px;">
+        *ove teorije su samo za zabavu. nismo stvarno zavera. verovatno.
+      </p>
+    </div>
+
+    <div class="dokument">
+      <div class="dok-naslov">📰 DEKLASIFIKOVANI NOVINSKI ISEČCI</div>
+
+      <div class="novinski-isecak">
+        <h4>GORNJOMILANOVAČKI GLASNIK</h4>
+        <p><strong>MISTERIOZNI ZVUCI DOPIRU IZ LOKALNE GARAŽE</strong> — Stanovnici naselja Vrljika prijavljuju "neidentifikovanu muziku" koja dopire iz jedne garaže utorkom uveče. Lokalne vlasti su pozvane ali su utvrdile da je to "samo bend na probi". Bend, identifikovan kao VIS Vrljika, nije bio dostupan za komentar jer je njihov gitarista bio usred solaže.</p>
+      </div>
+
+      <div class="novinski-isecak" style="margin-top:8px;">
+        <h4>BEND.RS — POVERLJIVI OGLAS</h4>
+        <p><strong>NEPOZNATI ENTITET TRAŽI SLEDBENIKE</strong> — Oglas se pojavio na bend.rs u aprilu 2023. opisujući grupu "šest dobrih ljudi ali loših muzičara" koji žele da "svoj entuzijazam prenesu na narod". Obaveštajni analitičari pregledaju oglas u potrazi za skrivenim porukama. Za sada, ništa nije pronađeno. Ali i dalje traže.</p>
+      </div>
+    </div>
+
+    <div class="dokument" style="text-align:center;background:#faf8e8;">
+      <div class="dok-naslov">🔍 NASTAVITE ISTRAGU</div>
+      <p style="margin-bottom:12px;">Istina je tamo negde. Verovatno u njihovim Instagram pričama.</p>
+      <a href="about.html" class="dugme">👤 PREGLEDAJ DOSIJEE</a>
+      <a href="music.html" class="dugme alert">🔊 PRISTUPI SIGNALIMA</a>
+      <a href="contact.html" class="dugme">📡 USPOSTAVI KONTAKT</a>
+    </div>
+  </main>
+
+  <aside>
+    <div class="sidebar-kartica">
+      <div class="sidebar-zaglavlje">🛸 VIĐENJA NLO-A</div>
+      <div style="padding:8px;font-size:10px;font-family:'Courier New',monospace;line-height:1.6;" id="nlo-dnevnik">
+        <p>2024-03: Svetla iznad GM-a</p>
+        <p>2024-07: Čudno brujanje (bas gitara?)</p>
+        <p>2025-01: Krug u žitu (samo njiva)</p>
+      </div>
+    </div>
+
+    <div class="sidebar-kartica">
+      <div class="sidebar-zaglavlje">📡 PRESRETNUTE KOMUNIKACIJE</div>
+      <div style="padding:8px;font-size:10px;font-family:'Courier New',monospace;color:#006600;line-height:1.6;max-height:150px;overflow:hidden;" id="presretanje-dnevnik">
+        <p>[SIGINT] Signal detektovan...</p>
+        <p>[SIGINT] Frekvencija: VRL-06.6 MHz</p>
+        <p>[SIGINT] Sadržaj: MUZIČKI</p>
+        <p>[SIGINT] Analiza: NEODREDIVO</p>
+      </div>
+    </div>
+
+    <div class="sidebar-kartica">
+      <div class="sidebar-zaglavlje">🔑 NIVOI PRISTUPA</div>
+      <div style="padding:8px;font-size:10px;font-family:'Courier New',monospace;line-height:1.8;">
+        <p>NIVO 1: Javni (Instagram)</p>
+        <p>NIVO 2: Poverljivo (Facebook)</p>
+        <p>NIVO 3: Tajno (mejling lista)</p>
+        <p>NIVO 4: Strogo poverljivo (poziv na svirku)</p>
+        <p>NIVO 5: <span class="redacted">████████████</span></p>
+      </div>
+    </div>
+
+    <div style="background:#1a1a2e;color:#FFD700;padding:8px;text-align:center;font-family:'Courier New',monospace;font-size:10px;border:2px solid #FFD700;margin:8px 0;">
+      <p>👁️ ONI NE ŽELE<br>DA OVO PROČITATE 👁️</p>
+      <p style="font-size:8px;color:#666;">(ko su "oni"? ni mi ne znamo)</p>
+    </div>
+  </aside>
+
+</div>
+
+<footer class="futer">
+  <p>📁 DOSIJEI VRLJIKE █ PREDMET BR. VLK-2023 █ DEKLASIFIKOVANO 2026 █</p>
+  <p style="margin-top:6px;">Ovaj dokument sadrži informacije od značaja za nacionalnu odbranu... ničega zapravo. To je samo sajt benda.</p>
+  <p style="font-size:9px;color:#555;margin-top:6px;">Ako ovo čitaš, sada si na spisku. (Na mejling listi. Prijavi se za obaveštenja o svirkama.)</p>
+  <p style="font-size:8px;color:#999;margin-top:4px;">Nijedna stvarna državna tajna nije otkrivena u izradi ovog sajta. Verovatno.</p>
+</footer>
+
+<!-- ====== POPUP SISTEM (svaki treći klik) ====== -->
+
+<!-- POPUP 1: PRISTUP EVIDENTIRAN -->
+<div class="popup-zavesa skriven" id="popup-pristup">
+  <div class="popup-prozor">
+    <div class="popup-zaglavlje">⚠️ PRISTUP EVIDENTIRAN<button class="popup-zatvori" onclick="zatvoriPopup('popup-pristup')">✕</button></div>
+    <div class="popup-telo">
+      <p style="font-size:18px;font-weight:bold;color:#8B0000;">VAŠ PRISTUP JE ZABELEŽEN!</p>
+      <p>IP adresa, lokacija i tip uređaja su sačuvani u našoj bazi podataka.</p>
+      <p style="font-size:10px;color:#666;margin-top:8px;">(Nije tačno. Nemamo bazu. Ovo je samo HTML fajl. Ali deluje ozbiljno, zar ne?)</p>
+      <div class="popup-pecat">EVIDENTIRANO</div>
+      <br><button onclick="zatvoriPopup('popup-pristup')" class="dugme">RAZUMEM</button>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP 2: SIGURNOSNA PRETNJA -->
+<div class="popup-zavesa skriven" id="popup-pretnja">
+  <div class="popup-prozor alert-zelena">
+    <div class="popup-zaglavlje zelena">🔓 PROBIJENA BEZBEDNOST<button class="popup-zatvori" onclick="zatvoriPopup('popup-pretnja')">✕</button></div>
+    <div class="popup-telo">
+      <p style="font-size:16px;font-weight:bold;color:#006600;">OTKRIVENA JE SIGURNOSNA RANJIVOST!</p>
+      <p>Nepoznati entitet je pristupio vašem uređaju. Preporučuje se hitna provera.</p>
+      <p style="font-size:10px;color:#666;margin-top:8px;">(Entitet = mi. Mi smo pristupili. I to samo da vam kažemo da pratite @visvrljika.)</p>
+      <div class="popup-pecat" style="color:#006600;border-color:#006600;">BEZBEDNOSNO UPOZORENJE</div>
+      <br><button onclick="zatvoriPopup('popup-pretnja')" class="dugme">PRIHVAĆENO</button>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP 3: NOVA DEKLASIFIKACIJA -->
+<div class="popup-zavesa skriven" id="popup-deklas">
+  <div class="popup-prozor alert-zlatna">
+    <div class="popup-zaglavlje zlatna">📄 NOVI DOKUMENT DEKLASIFIKOVAN<button class="popup-zatvori" onclick="zatvoriPopup('popup-deklas')">✕</button></div>
+    <div class="popup-telo">
+      <p style="font-size:16px;font-weight:bold;">NOVI POVERLJIVI MATERIJAL DOSTUPAN!</p>
+      <p>Dokument br. VLK-2025-042 je upravo deklasifikovan. Sadrži informacije o...</p>
+      <p style="background:#000;color:#000;padding:4px 8px;display:inline-block;cursor:pointer;" onclick="this.style.color='#FFD700';this.style.background='#333';">████████████████████</p>
+      <p style="font-size:10px;color:#666;margin-top:8px;">(Kliknite na redigovani tekst da "otkrijete". Spoiler: nema tu ničega.)</p>
+      <br><button onclick="zatvoriPopup('popup-deklas')" class="dugme">PREGLEDAJ DOKUMENT</button>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP 4: PRESRETNUTA PORUKA -->
+<div class="popup-zavesa skriven" id="popup-poruka">
+  <div class="popup-prozor alert-plava">
+    <div class="popup-zaglavlje plava">📡 PRESRETNUTA PORUKA<button class="popup-zatvori" onclick="zatvoriPopup('popup-poruka')">✕</button></div>
+    <div class="popup-telo">
+      <p style="font-size:14px;font-weight:bold;">SIGINT PRESREO ŠIFROVANU PORUKU:</p>
+      <p style="background:#f5f0e0;border:1px dashed #1a1a2e;padding:8px;margin:8px 0;font-style:italic;">"...šalju signale iz GM-a... šest subjekata... instrumenti... nisu u štimu... hitno obavestiti vrhovnu komandu..."</p>
+      <p style="font-size:10px;color:#666;">(Poruku smo sami napisali. Vrhovna komanda = naša grupa na WhatsApp-u.)</p>
+      <br><button onclick="zatvoriPopup('popup-poruka')" class="dugme">POTVRDI PRIJEM</button>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP 5: VANZEMALJSKA AKTIVNOST -->
+<div class="popup-zavesa skriven" id="popup-nlo">
+  <div class="popup-prozor alert-zelena">
+    <div class="popup-zaglavlje zelena">🛸 VANZEMALJSKA AKTIVNOST OTKRIVENA<button class="popup-zatvori" onclick="zatvoriPopup('popup-nlo')">✕</button></div>
+    <div class="popup-telo">
+      <p style="font-size:24px;">👽👽👽</p>
+      <p style="font-size:16px;font-weight:bold;color:#006600;">RADARI SU DETEKTOVALI NEPOZNATI OBJEKAT!</p>
+      <p>Letelica nepoznatog porekla primećena u blizini Gornjeg Milanovca. Svedoci tvrde da je iz letelice dopirala... muzika?</p>
+      <p style="font-size:10px;color:#666;margin-top:8px;">(Letelica = Pežo 206. Muzika = Vrljika sa razglasa.)</p>
+      <br><button onclick="zatvoriPopup('popup-nlo')" class="dugme">PRIJAVI VIĐENJE</button>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP 6: HITNA DEKLASIFIKACIJA -->
+<div class="popup-zavesa skriven" id="popup-hitno">
+  <div class="popup-prozor">
+    <div class="popup-zaglavlje">🚨 HITNO SAOPŠTENJE<button class="popup-zatvori" onclick="zatvoriPopup('popup-hitno')">✕</button></div>
+    <div class="popup-telo">
+      <p style="font-size:20px;font-weight:bold;color:#8B0000;" class="blink-fast">HITNO! HITNO! HITNO!</p>
+      <p>OVLAŠĆENO OSOBLJE JE UPRAVO ODOBRILO <strong>POTPUNU DEKLASIFIKACIJU</strong> SVIH DOSIJEA VRLJIKE!</p>
+      <p>Ovo uključuje: audio snimke, fotografije, i... članak na bend.rs-u.</p>
+      <p style="font-size:10px;color:#666;margin-top:8px;">(Ovlašćeno osoblje = Petar je rekao "ma može" na probi.)</p>
+      <br><button onclick="zatvoriPopup('popup-hitno')" class="dugme alert">PRISTUPI ODMAH</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== POPUP SISTEM (svaki treći klik na bilo koje dugme) =====
+var popupi=['popup-pristup','popup-pretnja','popup-deklas','popup-poruka','popup-nlo','popup-hitno'];
+var brojacKlikova=0;
+
+function zatvoriPopup(id){document.getElementById(id).classList.add('skriven')}
+
+// Zatvori popup klikom na zavesu (pozadinu)
+document.addEventListener('click',function(e){if(e.target.classList.contains('popup-zavesa'))e.target.classList.add('skriven')});
+
+// Broji klikove na dugmad, prikaži popup na svaki treći
+document.addEventListener('click',function(e){
+  var el=e.target;
+  // Proveri da li je kliknuto dugme (button, a.dugme, .file-btn, input[type=submit])
+  if(el.tagName==='BUTTON'||el.tagName==='A'||(el.tagName==='INPUT'&&el.type==='submit')||el.closest('button')||el.closest('.dugme')){
+    brojacKlikova++;
+    if(brojacKlikova%3===0){
+      // Sakrij sve prethodno otvorene popupe
+      for(var i=0;i<popupi.length;i++){document.getElementById(popupi[i]).classList.add('skriven')}
+      // Prikaži nasumični popup
+      var randomId=popupi[Math.floor(Math.random()*popupi.length)];
+      document.getElementById(randomId).classList.remove('skriven');
+    }
+  }
+});
+
+// Ostali scriptovi
+document.querySelectorAll('.redacted').forEach(function(el){el.addEventListener('click',function(){this.classList.toggle('redacted')})});
+setInterval(function(){var l=document.getElementById('nlo-dnevnik');if(!l)return;var m=['Svetla viđena','Čudna frekvencija','Gitarski solo u 3 ujutru','Bas linija nepoznatog porekla','Svedok: "Zvučalo je... fanki"'];var d=document.createElement('p');var dat=new Date();dat.setDate(dat.getDate()-Math.floor(Math.random()*365));d.textContent=dat.toISOString().slice(0,10)+': '+m[Math.floor(Math.random()*m.length)];l.insertBefore(d,l.firstChild);if(l.children.length>10)l.removeChild(l.lastChild)},8000);
+setInterval(function(){var l2=document.getElementById('presretanje-dnevnik');if(!l2)return;var m2=['Signal: GITARSKI RIF','Frekvencija: BAS','Poreklo: GM OBLAST','Analiza: FANKI','Klasifikacija: STROGO POVERLJIVO'];var d=document.createElement('p');d.textContent='[SIGINT] '+m2[Math.floor(Math.random()*m2.length)];l2.insertBefore(d,l2.firstChild);if(l2.children.length>15)l2.removeChild(l2.lastChild)},5000);
+(function(){var s=['👽','🛸','👁️','📁','🔍','📡','⚠️','🕵️'];var l=0;document.addEventListener('mousemove',function(e){var n=Date.now();if(n-l<100)return;l=n;var t=document.createElement('div');t.style.cssText='position:fixed;pointer-events:none;z-index:99999;font-size:18px;';t.textContent=s[Math.floor(Math.random()*s.length)];t.style.left=(e.pageX-9)+'px';t.style.top=(e.pageY-9)+'px';document.body.appendChild(t);var o=1;var f=setInterval(function(){o-=0.08;t.style.opacity=o;if(o<=0){clearInterval(f);t.remove()}},40)})})();
+console.log('%c🛸 %cDOSIJEI VRLJIKE %c| %cPristupili ste poverljivom materijalu. %cIstina je tamo negde. %c(Na Instagramu @visvrljika)','font-size:20px;','font-family:monospace;color:#FFD700;background:#1a1a2e;padding:4px;','','color:#006600;','color:#888;');
+console.log('%c💡 %cSAVET: %cSvaki treći klik na dugme otvara poverljivi popup. Probajte!','','color:#FFD700;','');
+</script>
+</body>
+</html>
