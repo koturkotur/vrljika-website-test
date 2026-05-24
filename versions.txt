@@ -1,0 +1,11 @@
+VIS Vrljika — Verzije sajta
+============================
+
+Trenutna verzija (default):
+  /                        v2 — Scam Maximalist Edition
+
+Starije / eksperimentalne verzije:
+  /v1/                     v1 — Brutalist 2000s Edition
+  /v3/                     v3 — Conspiracy Files (eksperimentalna)
+
+Sve verzije su hostovane na GitHub Pages.

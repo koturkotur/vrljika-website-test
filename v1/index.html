@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vokalno Instrumentalni Sastav Vrljika - Amalgamacija žanrova bez zdravog razuma">
+<meta name="keywords" content="Vrljika, bend, Gornji Milanovac, muzika, eksperimentalno">
+<title>VIS VRLJIKA — Zvanični Sajt</title>
+
+<style>
+  /* ============================================================
+     DIGITAL CHIMERA: BRUTALISM × FRUTIGER AERO × 2000s × TRASH
+     ============================================================ */
+
+  /* --- BRUTALIST FOUNDATION --- */
+  * { margin: 0; padding: 0; image-rendering: auto; }
+
+  body {
+    background-color: #C0C0C0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23999999' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    font-family: "Times New Roman", Times, serif;
+    color: #000000;
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ctext y='18' font-size='18'%3E🗡️%3C/text%3E%3C/svg%3E") 0 0, auto;
+    overflow-x: hidden;
+  }
+
+  /* --- CUSTOM XP LUNA SCROLLBAR --- */
+  ::-webkit-scrollbar { width: 18px; height: 18px; }
+  ::-webkit-scrollbar-track {
+    background: #ECE9D8;
+    border: 2px solid #0054E3;
+    box-shadow: inset 0 0 0 1px #FFF;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #FFFFFF 0%, #D4D0C8 100%);
+    border: 2px outset #FFFFFF;
+    border-radius: 3px;
+    box-shadow: 1px 1px 0 #808080;
+  }
+  ::-webkit-scrollbar-button {
+    background: linear-gradient(180deg, #FFFFFF 0%, #D4D0C8 100%);
+    border: 2px outset #FFFFFF;
+    height: 18px;
+    display: block;
+  }
+
+  /* --- MARQUEE --- */
+  .marquee-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    border: 4px double #FF00FF;
+    background: #000000;
+    padding: 6px 0;
+    margin: 8px 0;
+  }
+  .marquee-content {
+    display: inline-block;
+    animation: marquee 12s linear infinite;
+    color: #00FF00;
+    font-family: "Comic Sans MS", "Papyrus", cursive;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 #FF00FF;
+  }
+  @keyframes marquee {
+    0%   { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+  }
+  .marquee-reverse .marquee-content {
+    animation: marquee-rev 8s linear infinite;
+    color: #FFFF00;
+    text-shadow: 2px 2px 0 #0000EE;
+  }
+  @keyframes marquee-rev {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100vw); }
+  }
+
+  /* --- BLINK --- */
+  .blink {
+    animation: blink 0.8s steps(2, start) infinite;
+  }
+  @keyframes blink {
+    0%   { visibility: visible; }
+    100% { visibility: hidden; }
+  }
+
+  /* --- RAINBOW DIVIDER ANIMATION (STEPPED, NO SMOOTH) --- */
+  .rainbow-bar {
+    height: 8px;
+    animation: rainbow 0.5s steps(6, start) infinite;
+  }
+  @keyframes rainbow {
+    0%   { background: #FF0000; }
+    16%  { background: #FF8800; }
+    33%  { background: #FFFF00; }
+    50%  { background: #00FF00; }
+    66%  { background: #0000FF; }
+    83%  { background: #4B0082; }
+    100% { background: #8B00FF; }
+  }
+
+  /* --- BRUTALIST CONTAINER --- */
+  .brutal-box {
+    background: #FFFFFF;
+    border: 5px solid #000000;
+    box-shadow: 8px 8px 0 #000000;
+    padding: 16px;
+    margin: 20px 12px;
+    position: relative;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .brutal-box::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 3px double #FF00FF;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .brutal-box-pink {
+    box-shadow: 8px 8px 0 #FF00FF;
+    border-color: #FF00FF;
+  }
+  .brutal-box-pink::before { border-color: #000000; }
+
+  /* --- FRUTIGER AERO GLOSSY BUTTON --- */
+  .aero-btn {
+    display: inline-block;
+    font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    background: linear-gradient(180deg, #7BC8F6 0%, #4BA3E3 40%, #0B5B9D 100%);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 28px;
+    cursor: pointer;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.5) inset,
+      0 -1px 0 rgba(0,0,0,0.2) inset,
+      0 4px 0 #0B5B9D,
+      0 6px 12px rgba(0,0,0,0.3);
+    position: relative;
+    transition: none;
+    text-decoration: none;
+  }
+  .aero-btn::after {
+    content: "";
+    position: absolute;
+    top: 3px; left: 12px; right: 12px; height: 40%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%);
+    border-radius: 50px;
+    pointer-events: none;
+  }
+  .aero-btn:hover {
+    background: linear-gradient(180deg, #8DD4FF 0%, #5BAEE8 40%, #1B6BAD 100%);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset, 0 -1px 0 rgba(0,0,0,0.2) inset, 0 4px 0 #0B5B9D, 0 0 20px rgba(75,163,227,0.6);
+  }
+  .aero-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset, 0 -1px 0 rgba(0,0,0,0.2) inset, 0 2px 0 #0B5B9D;
+  }
+
+  .aero-btn-green {
+    background: linear-gradient(180deg, #8FE06B 0%, #78C257 40%, #3B8C25 100%);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.5) inset, 0 -1px 0 rgba(0,0,0,0.2) inset, 0 4px 0 #3B8C25, 0 6px 12px rgba(0,0,0,0.3);
+  }
+  .aero-btn-green:hover { background: linear-gradient(180deg, #A0F07B 0%, #88D267 40%, #4B9C35 100%); }
+
+  /* --- TABLE LAYOUT (2000s) --- */
+  .layout-table {
+    width: 100%;
+    border: 3px solid #000000;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  .layout-table td {
+    border: 3px solid #000000;
+    vertical-align: top;
+    padding: 0;
+  }
+
+  /* --- HEADER --- */
+  .site-header {
+    background: linear-gradient(180deg, #000000 0%, #1a1a2e 50%, #000000 100%);
+    border-bottom: 6px solid #FF00FF;
+    text-align: center;
+    padding: 20px 0 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header-logo {
+    max-width: 480px;
+    width: 80%;
+    filter: drop-shadow(0 0 15px #4BA3E3) drop-shadow(3px 3px 0 #FF00FF);
+    margin: 0 auto;
+    display: block;
+  }
+  .header-subtitle {
+    font-family: "Comic Sans MS", "Papyrus", cursive;
+    color: #00FF00;
+    font-size: 18px;
+    text-shadow: 2px 2px 0 #000000, 0 0 10px #00FF00;
+    margin-top: 8px;
+  }
+
+  /* --- NAV BAR --- */
+  .nav-bar {
+    background: #FF00FF;
+    border: 4px solid #000000;
+    border-left: none;
+    border-right: none;
+    padding: 0;
+    text-align: center;
+  }
+  .nav-bar a {
+    display: inline-block;
+    font-family: "Impact", "Arial Black", sans-serif;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    background: #FFFF00;
+    padding: 10px 20px;
+    border: 3px solid #000000;
+    margin: 4px 2px;
+    box-shadow: 4px 4px 0 #000000;
+    transition: none;
+  }
+  .nav-bar a:hover {
+    background: #00FF00;
+    box-shadow: 2px 2px 0 #000000;
+    transform: translate(2px, 2px);
+  }
+
+  /* --- SECTION TITLES --- */
+  .section-title {
+    font-family: "Impact", "Arial Black", sans-serif;
+    font-size: 42px;
+    color: #FF00FF;
+    text-shadow: 4px 4px 0 #000000, 0 0 20px #FFFF00;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 24px 0 12px;
+    text-transform: uppercase;
+  }
+  .section-title-alt {
+    font-family: "Times New Roman", serif;
+    font-size: 48px;
+    font-weight: bold;
+    font-style: italic;
+    color: #000000;
+    text-align: left;
+    border-bottom: 8px solid #000000;
+    padding-bottom: 4px;
+    margin: 30px 12px 16px;
+  }
+
+  /* --- TEXT STYLES --- */
+  .bio-text {
+    font-family: "Comic Sans MS", "Trebuchet MS", cursive;
+    font-size: 17px;
+    line-height: 1.3;
+    color: #000000;
+    padding: 8px 16px;
+  }
+  .bio-text strong {
+    font-family: "Impact", "Arial Black", sans-serif;
+    color: #FF0000;
+    font-size: 20px;
+    text-shadow: 2px 2px 0 #FFFF00;
+  }
+
+  .mono-text {
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    background: #FFFF00;
+    color: #000000;
+    padding: 8px;
+    border: 3px solid #000000;
+    display: inline-block;
+    margin: 8px;
+  }
+
+  /* --- COVER ART GRID --- */
+  .cover-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 8px;
+    padding: 12px;
+  }
+  .cover-card {
+    background: #000000;
+    border: 5px solid #FF00FF;
+    box-shadow: 6px 6px 0 #000000;
+    padding: 6px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* NO pixelation, NO JPEG compression — good resolution per user request */
+    image-rendering: auto;
+    filter: none;
+  }
+  .cover-label {
+    font-family: "Impact", "Arial Black", sans-serif;
+    font-size: 11px;
+    color: #00FF00;
+    background: #000000;
+    padding: 4px;
+    margin-top: 4px;
+    text-shadow: 1px 1px 0 #FF00FF;
+    letter-spacing: 1px;
+  }
+
+  /* --- FORM --- */
+  .brutal-form {
+    font-family: "Courier New", monospace;
+  }
+  .brutal-form input,
+  .brutal-form textarea,
+  .brutal-form select {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 4px solid #000000;
+    box-shadow: 4px 4px 0 #000000;
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+    background: #FFFF00;
+    color: #000000;
+  }
+  .brutal-form input:focus,
+  .brutal-form textarea:focus {
+    outline: 4px solid #FF00FF;
+    background: #FFFFFF;
+  }
+  .brutal-form label {
+    font-family: "Impact", "Arial Black", sans-serif;
+    font-size: 14px;
+    color: #FF0000;
+    text-shadow: 2px 2px 0 #FFFF00;
+    display: block;
+    margin-top: 8px;
+    padding-left: 4px;
+  }
+
+  /* --- FOOTER --- */
+  .site-footer {
+    background: #000000;
+    color: #C0C0C0;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+    text-align: center;
+    padding: 20px 10px;
+    border-top: 6px solid #FF00FF;
+    margin-top: 40px;
+  }
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    margin: 12px 0;
+  }
+  .badge-88x31 {
+    width: 88px;
+    height: 31px;
+    border: 2px solid #FF00FF;
+    image-rendering: pixelated;
+    background: #000000;
+    font-family: "Arial", sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    color: #FFFF00;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  /* --- CURSOR TRAIL --- */
+  .cursor-trail {
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+    font-size: 16px;
+    animation: trailFade 1s steps(10, end) forwards;
+    font-family: sans-serif;
+  }
+  @keyframes trailFade {
+    0%   { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.3) translateY(-30px); }
+  }
+
+  /* --- GLITCH DECORATION --- */
+  .glitch-text {
+    position: relative;
+    display: inline-block;
+  }
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0.7;
+  }
+  .glitch-text::before {
+    color: #FF0000;
+    animation: glitch-shift 2s steps(3, start) infinite;
+    clip-path: inset(20% 0 60% 0);
+  }
+  .glitch-text::after {
+    color: #00FF00;
+    animation: glitch-shift 2.3s steps(3, start) infinite reverse;
+    clip-path: inset(60% 0 20% 0);
+  }
+  @keyframes glitch-shift {
+    0%   { transform: translate(0); }
+    33%  { transform: translate(-2px, 1px); }
+    66%  { transform: translate(2px, -1px); }
+    100% { transform: translate(0); }
+  }
+
+  /* --- HIT COUNTER --- */
+  .hit-counter {
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    background: #000000;
+    color: #00FF00;
+    border: 3px inset #808080;
+    padding: 4px 12px;
+    display: inline-block;
+    letter-spacing: 2px;
+    text-shadow: 0 0 6px #00FF00;
+  }
+
+  /* --- STAR BACKGROUND OVERLAY --- */
+  .starfield {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='1.5' fill='black'/%3E%3Ccircle cx='60' cy='30' r='1' fill='black'/%3E%3Ccircle cx='120' cy='50' r='1.5' fill='black'/%3E%3Ccircle cx='30' cy='80' r='1' fill='black'/%3E%3Ccircle cx='90' cy='120' r='1.5' fill='black'/%3E%3Ccircle cx='170' cy='90' r='1' fill='black'/%3E%3Ccircle cx='50' cy='160' r='1.5' fill='black'/%3E%3Ccircle cx='140' cy='170' r='1' fill='black'/%3E%3Ccircle cx='180' cy='20' r='1' fill='black'/%3E%3Ccircle cx='110' cy='180' r='1.5' fill='black'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
+
+  /* --- RESPONSIVE BREAKAGE --- */
+  @media (max-width: 800px) {
+    .section-title { font-size: 28px; }
+    .section-title-alt { font-size: 32px; }
+    .layout-table, .layout-table tbody, .layout-table tr, .layout-table td {
+      display: block;
+      width: 100% !important;
+    }
+    .cover-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 500px) {
+    .cover-grid { grid-template-columns: 1fr; }
+    .brutal-box { margin: 10px 4px; padding: 8px; }
+    body { overflow-x: scroll !important; }
+  }
+
+  /* --- HIDDEN EASTER EGG --- */
+  .secret-message {
+    font-family: "Comic Sans MS", cursive;
+    color: #C0C0C0;
+    font-size: 8px;
+    text-align: center;
+    margin-top: 4px;
+    opacity: 0.5;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="starfield"></div>
+
+<!-- ============ CURSOR TRAIL CANVAS ============ -->
+<div id="trail-container"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <!-- Vrljika Logo SVG Inlined -->
+  <svg class="header-logo" viewBox="0 0 1748 1801" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#FFFFFF">
+      <path d="M367.32,422.34h0c9.05-27.95,10.74-68.09-5.91-94.79-9.41-15.12-23.91-24.46-41.85-27.04-26.52-3.81-54.66,2.46-79.48,8l-9.53,2.11c-4.3.93-8.66,1.93-13.07,3,11.87-27.48,6.85-59.33-12.88-81.83-21-24.32-53.93-35.23-88-29.18-17.93,3.34-34.97,10.4-50,20.73-3.71,2.53-7.27,5.39-10.71,8.16-9,7.23-17.5,14-27.12,13.86-.59-.03-1.18-.03-1.77,0-9.22-2-19.07,2.45-24.12,11.22-5.16,8.65-3.24,19.78,4.51,26.21,43.08,37.21,81.65,79.36,114.9,125.57,4.48,6.27,8.89,13,13.55,20.19,23,35.27,49.06,75.25,98,75.34,12.4,0,24.5-2.33,36.48-6.12,15.29-4.84,30.39-12,45.62-19.67,26.39-13.21,43.67-32,51.38-55.76h0ZM126,341.63c-18.68-22.52-38.61-43.97-59.71-64.24,5-3.17,9.65-6.67,14.25-10.12,5.28-3.95,10.27-7.69,15.53-10.86,18.59-11.15,45.93-18,67-3.57,16.73,11.44,21.64,30.53,12.2,47.49-10.27,18.49-30.53,31.26-49.27,41.3ZM281.62,445.9h0c-19.39,8.69-41.34,18.55-59.92,12.29-15.66-5.27-26.54-20-38.15-37.36l-2.22-3.32c-8.78-13.1-17.78-26.55-27.27-39.68,46-16.16,90.57-27.34,132.73-33.16,21.72-3,35.94-2.63,39.72,8.53,4.88,14.44,4.55,38.34-.78,55.58-5.21,16.85-19.54,26.16-41,35.73l-3.11,1.39h0Z"/>
+      <path d="M339.65,161.14c12.22,19.16,18.19,42.38,24,64.85l1.36,5.27c16.37,63.16,46.35,116.3,86.34,176.67,4.73,7.56,13.46,11.64,22.29,10.42,3.93-.49,7.7-1.88,11-4.07,11-7.27,13.74-20.43,6.56-31.27-29.28-44.2-55-84.82-71.05-130.86l8.43-4c40.79-19.18,87-40.91,104.06-89.65,8.91-25.46,5.69-52.09-8.85-73-14.26-20.58-37.41-32.68-63.55-33.25-21.51-.48-43.4,2.36-64.52,5.11-8,1-15.93,2.07-23.78,2.91-18.28,1.95-48.87,5.25-58.87,32.55-8.63,23.6,5.77,41.54,17.35,56,3.29,3.94,6.37,8.05,9.23,12.32h0ZM359,109.6c7.22-2.94,17-3.46,26.4-4,4.11-.22,8.11-.44,11.88-.83l13.42-1.41c8.92-.94,17.83-1.89,26.75-2.76,34.85-3.42,49.05,2.76,52.46,22.8,6.63,38.93-33.37,60.89-82.79,83.32-4.62-17.38-9.77-35.06-17.57-51.92-4.87-10.61-10.95-20.61-18.13-29.81-1.22-1.56-2.79-3.33-4.48-5.24-2.2-2.48-6.39-7.2-8-10.15h.06Z"/>
+      <path d="M619.37,340.77h0c1.99.49,4.03.71,6.08.66,9.42-.19,17.49-6.8,19.52-16,7.64-31.6,6.83-63.72,6-94.78-.82-32.77-1.61-63.73,6.61-94.44,13.42-49.72,54.55-97.67,107.42-93.07l1,.09c2.45.13,4.88.49,7.27,1.07.38,2.78-.24,8.9-.56,12-.32,3.1-.58,5.84-.61,8l-2.2,157.46c0,2.37-.08,4.8-.14,7.25-.58,24.81-1.29,55.68,21.86,75.3,19.25,16.32,50,18.11,74.75,4.41,31.32-17.34,43.07-53.91,47.29-74.16s-3.66-35.91-20.09-39.96c-6.69-1.64-14.44-.78-21.84,2.4-5.15,2.22-8.72,5.75-11.87,8.86-2.14,2.11-4.16,4.11-5.92,4.82-12.77,5.16-16.1,18.89-11.94,29.18,3.6,8.93,11.71,13.71,20.51,12.55-1.14,2.15-2.4,4.23-3.77,6.24-6.88,10-21.32,17.59-31.48,16.59-5.85-.6-9.81-3.8-12.45-10.07-3.1-7.36-2.81-17.07-2.53-26.46.06-2.08.12-4.13.15-6.13l2.06-149c.06-3.79.41-8.27.78-13,1.72-21.92,4.31-55-24-65.34-20.79-7.57-47.22-6.91-72.51,1.81-47.26,16.3-83.9,57-100.51,111.63-7.91,26-11.66,55.48-11.46,90,.05,9.54.43,19.15.79,28.46,1.06,27.15,2,52.79-4.09,78.2-2.81,11.63,4,22.56,15.88,25.43h0Z"/>
+      <path d="M1008.16,391.23h0c12.18,2.05,24.18-5,27.75-16.5,4.47-14.83,7.5-30.05,9.06-45.45,15-38.05,47.44-69,78.79-98.93l9.36-8.95c13.3-12.82,25.88-26.07,37.75-39.75l-8.19,33.87c-11.43,47.29-24.39,100.89-23.75,156.32.1,8.31,4.12,15.3,11,19.19,3.93,2.18,8.38,3.22,12.87,3,4.08-.17,8.05-1.35,11.57-3.42,7.12-4.16,11.38-11.88,11.11-20.12-.57-48.88,11.24-97.64,22.66-144.8l38.26-157.89c2.76-11.4-3.4-22.71-14.75-26.88-11.45-4.23-23.22.22-28.62,10.83-26.27,51.6-63,98.57-119.07,152.33-10.34,9.91-22.5,21.92-34.36,35.31.65-10.82,1.86-21.59,3.63-32.28,7.22-42.49,20.8-85.17,33.92-126.43,4.71-14.83,9.41-29.61,13.83-44.36,3.66-12.23-2.66-23.8-15-27.49-11.43-3.42-25.81,1.54-30.06,15.76-4.38,14.63-9,29.3-13.72,44-13.34,42-27.14,85.35-34.62,129.28-4,23.72-4.74,47.82-5.43,71.13-.5,16.87-1,34.3-2.81,51.09-5.52,15.74-8.62,32.23-9.18,48.9-.36,11.43,6.89,20.37,18,22.24h0Z"/>
+      <path d="M1297.38,461.16c28-23.57,36.92-57.28,45.58-89.87,4.74-17.82,9.21-34.65,16.57-49.72,2.78-5.7,5.63-11.56,8.5-17.51.5,1.34,1,2.7,1.49,4.05,19.4,52.66,39.45,107.12,48.5,162.55,2.38,14.52,15,21.8,27,21.19.96-.05,1.93-.16,2.88-.31,12.83-2.1,20.63-12.9,18.54-25.69-10.04-61.46-31.59-120.54-52.44-177.67-3.96-10.85-7.89-21.7-11.78-32.55-.12-.32-.24-.65-.37-1,8.61-4.55,18.15-8,28.09-11.62l6.52-2.37c20.49-7.59,41.94-17,59.9-34.24,9.56-9.19,9.76-22.87.48-32.53-8.68-9-24.38-11.93-35.6-1.13-13.79,13.25-31.82,19.95-50.93,27,4.97-16.8,8.71-33.94,11.18-51.29,2.16-15.47-9.42-26.52-21.87-28.27-13.22-1.85-24.13,6.3-26,19.39-4.36,31.1-13.45,62.41-28.6,98.4-3.42,3.8-5.53,8.6-6,13.69-5.63,12.58-12.13,26.21-20.38,42.68-11.27,22.51-19.88,46.26-25.65,70.76l-1.32,5.64c-4.5,19.42-9.15,39.5-23,51.22-12.23,10.3-11,26.65-2.66,36.5s21.51,11,31.37,2.7Z"/>
+      <path d="M1738.31,303.38h0c-1.27-5.34-2.73-10.67-4.19-16-5.27-19.17-10.23-37.29-6.06-55.53,2.45-10.7-3.19-20.43-13.73-23.65s-21.23,1.23-25.93,10.39l-.26.28c-17.87,19.61-34.75,39.28-44.9,64.19-1.15,2.83-2.25,5.65-3.35,8.46-3.8,9.67-7.39,18.82-12.52,27.41-5.35,8.94-11.48,17.81-17.41,26.4-2.26,3.26-4.5,6.52-6.73,9.79l-50.77,74.87c-3.76,5.54-7.63,11.06-11.5,16.6-12.4,17.72-25.22,36-35.17,55.81-3.41,6.32-3.09,13.99.84,20,4.46,6.56,12.03,10.29,19.95,9.85,7.51-.41,14.19-4.89,17.42-11.68,9.58-19,22.47-37.3,34.94-55,4.6-6.52,9.18-13,13.61-19.55l19.62-28.91c26.09-3,60.27,4.22,89.83,19.16-3.46,32.08-9.52,64.42-15.38,95.77l-.25,1.3c-1.52,7.09.97,14.45,6.48,19.17,4.69,3.93,10.78,5.79,16.86,5.14,1.71-.18,3.38-.56,5-1.13,7.01-2.43,12.12-8.51,13.31-15.83,8.62-46,19.35-103.34,19.1-159.64.03-26.14-2.93-52.2-8.81-77.67h0ZM1704.93,391.7c-11.57-4.32-23.4-7.9-35.43-10.71-9.57-2.38-19.28-4.22-29.06-5.51l3-4.34c13-19.06,26.38-38.77,35.06-61.55,3.16-8.32,7.05-16.35,11.61-24,1,3.85,2,7.65,3,11.36,6.87,24.82,10.8,50.36,11.69,76.1.2,6.08.24,12.25.13,18.65h0Z"/>
+      <g>
+        <path d="M1076.32,968.16h0c20.23-11.52,37.55-26.85,54.3-41.68,14.76-13.08,30-26.6,46.91-37,6.3-3.71,10.08-10.56,9.85-17.87-.26-7.82-4.6-14.94-11.44-18.75-6.23-3.37-13.43-3-19.77.87-19.95,12.31-38.67,26.52-55.9,42.42l-1.07,1c-15.2,14-29.56,27.32-47.4,37-8.81,4.79-18.14,9.24-27.16,13.54-5.28,2.52-10.64,5.07-16,7.73,13.19-32.22,29.87-70,50-106,5.74-10.27,2.16-22.44-8.33-28.31-10.22-5.72-22.17-2.47-27.79,7.57-29.14,52.07-51.24,108.53-72.61,163.14l-4.13,10.54c-23.76,60.61-46.13,123-66.78,181.46-.7-2.06-1.4-4.11-2.13-6.15-4.49-12.57-17.65-16.34-27.8-12.72-10.74,3.83-15.78,14.33-12,25,1.24,3.46,2.42,7,3.61,10.57,4.62,13.8,9.38,28,17.75,40.44-37.58,102.59-78.22,202.89-120.85,298.23-4.53,3.94-7.09,9.68-7,15.68-29.25,64.91-59.69,130-86.58,187.57-5.71,12.23,1.07,24.31,10.92,28.91,2.74,1.3,5.74,1.98,8.77,2,7.13,0,13.61-4,17-11.26,31.46-67.3,59.82-128.19,87.78-190.34,15.67-4.27,31.62-7.41,47.73-9.4,7.73-.83,14.38-5.82,17.35-13,3.11-7.3,2.31-15.78-2-21.58-3.93-5.24-10.25-7.77-17.29-6.91-8.3,1-16.56,2.24-24.67,3.69,18-40.73,33.94-78.18,48.68-114.07,29-70.65,55.08-143.62,80.28-214.18,17.16-48.06,34.9-97.76,53.41-146.22l9.59-25.16c.15-.17.31-.33.46-.51,16.66-18.77,39-29.24,62.72-40.32,10.43-4.99,21.27-10.1,31.59-15.93h0Z"/>
+        <rect x="574.95" y="754.77" width="16.66" height="398.82" transform="translate(-463.37 1348.15) rotate(-79.19)"/>
+        <rect x="1206.14" y="1045.28" width="351.19" height="16.66" transform="translate(-81.03 115.74) rotate(-4.66)"/>
+        <rect x="1223.62" y="927.21" width="240.75" height="16.66" transform="translate(-270.13 659.59) rotate(-25.14)"/>
+        <rect x="272.14" y="1178.36" width="398.91" height="16.66" transform="translate(-17.35 7.04) rotate(-.84)"/>
+        <rect x="736.55" y="572.94" width="16.66" height="346.21" transform="translate(-309.33 737.86) rotate(-44.6)"/>
+        <rect x="275.1" y="1699.47" width="223.63" height="16.66" transform="translate(-969.02 599.77) rotate(-37.98)"/>
+        <rect x="279.53" y="1470.11" width="296.91" height="16.65" transform="translate(-512.49 260.06) rotate(-21.52)"/>
+        <polygon points="1170.5 1214.61 1508.01 1333.38 1511.94 1334.76 1517.47 1319.04 1176.03 1198.89 1170.5 1214.61"/>
+        <rect x="1202.56" y="1359.64" width="16.66" height="254.65" transform="translate(-658.59 1914.01) rotate(-63.71)"/>
+        <rect x="1076.84" y="1582.36" width="16.66" height="237.45" transform="translate(-813.46 1018.1) rotate(-37.68)"/>
+      </g>
+    </g>
+  </svg>
+
+  <p class="header-subtitle blink">✦ ZVANIČNI SAJT ✦ GORNJI MILANOVAC ✦</p>
+</header>
+
+<!-- ============ MARQUEE 1 ============ -->
+<div class="marquee-wrap">
+  <div class="marquee-content">
+    ★ VOKALNO INSTRUMENTALNI SASTAV VRLJIKA ★ AMALGAMACIJA GOMILE ŽANROVA ★ PONEKAD SA SMISLOM ★ ČEŠĆE BEZ IKAKVOG ZDRAVOG RAZUMA ★ ŠEST DOBRIH LJUDI ★ LOŠI MUZIČARI ★ DOBRA ZABAVA ★
+  </div>
+</div>
+
+<!-- ============ RAINBOW DIVIDER ============ -->
+<div class="rainbow-bar"></div>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="nav-bar">
+  <a href="#about">O BENDU</a>
+  <a href="#music">MUZIKA</a>
+  <a href="#events">DOGAĐAJI</a>
+  <a href="#contact">KONTAKT</a>
+  <a href="#guestbook">KNJIGA GOSTIJU</a>
+  <a href="https://www.instagram.com/visvrljika/" target="_blank">INSTAGRAM</a>
+  <a href="https://www.facebook.com/VokalnoInstrumentalniSastavVrljika" target="_blank">FACEBOOK</a>
+</nav>
+
+<!-- ============ MARQUEE 2 ============ -->
+<div class="marquee-wrap marquee-reverse">
+  <div class="marquee-content">
+    ⚠️ UNDER CONSTRUCTION ⚠️ SAJT U IZRADI ⚠️ NAJBOLJE PREGLEDANO U NETSCAPE NAVIGATORU ⚠️ REZOLUCIJA 800x600 ⚠️
+  </div>
+</div>
+
+<!-- ============ MAIN LAYOUT TABLE ============ -->
+<table class="layout-table" cellpadding="0" cellspacing="0" border="3">
+  <tr>
+    <!-- === SIDEBAR LEFT === -->
+    <td width="22%" bgcolor="#C0C0C0" valign="top" style="padding:8px;">
+      <div style="background:#FFFF00;border:4px solid #000000;padding:8px;margin-bottom:10px;box-shadow:5px 5px 0 #FF00FF;">
+        <p style="font-family:'Impact','Arial Black',sans-serif;font-size:13px;color:#FF0000;text-align:center;margin:0;">📢 VESTI</p>
+      </div>
+
+      <div class="brutal-box" style="margin:8px 0;padding:10px;">
+        <p style="font-family:'Comic Sans MS',cursive;font-size:13px;line-height:1.4;">
+          <span class="blink" style="color:#FF0000;">🆕 NOVO!</span><br>
+          <strong style="font-family:Impact;font-size:15px;">SVIRKA U GM</strong><br>
+          31. februar 2026.<br>
+          <em style="font-size:10px;">(datum podložan promeni)</em>
+        </p>
+      </div>
+
+      <div class="brutal-box brutal-box-pink" style="margin:8px 0;padding:10px;">
+        <p style="font-family:'Comic Sans MS',cursive;font-size:13px;line-height:1.4;">
+          <strong style="font-family:Impact;font-size:15px;">NOVI ALBUM</strong><br>
+          "Zvuci sa Vrljike"<br>
+          <em style="font-size:10px;">uskoro... možda... ko zna</em>
+        </p>
+      </div>
+
+      <div style="text-align:center;margin-top:16px;">
+        <div class="badge-88x31" style="margin:2px auto;">VRML 1.0</div>
+        <div class="badge-88x31" style="margin:2px auto;">BEST VIEW<br>800×600</div>
+        <div class="badge-88x31" style="margin:2px auto;">MADE WITH<br>NOTEPAD</div>
+        <div class="badge-88x31" style="margin:2px auto;background:#00FF00;color:#000000;">OPTIMIZED<br>4 NETSCAPE</div>
+      </div>
+
+      <div style="text-align:center;margin-top:20px;">
+        <p style="font-family:'Times New Roman',serif;font-size:11px;color:#000;">Posetioci:</p>
+        <div class="hit-counter" id="hit-counter">000042069</div>
+      </div>
+    </td>
+
+    <!-- === MAIN CONTENT === -->
+    <td width="56%" bgcolor="#FFFFFF" valign="top" style="padding:0;">
+
+      <!-- ABOUT SECTION -->
+      <div id="about">
+        <h2 class="section-title">O BENDU</h2>
+      </div>
+
+      <div class="brutal-box">
+        <p class="bio-text">
+          <strong>Vrljika</strong> je bend iz <strong>Gornjeg Milanovca</strong> koja svira amalgamaciju gomile žanrova — ponekad sa smislom, ali <strong>češće bez ikakvog zdravog razuma</strong>.
+        </p>
+        <p class="bio-text">
+          Sastoji se od <strong>šest dobrih ljudi</strong>, ali loših muzičara koji samo žele da se dobro zabave i svoj <strong>entuzijazam prenesu na narod</strong> koji ih okružuje i sluša.
+        </p>
+        <p class="bio-text" style="font-family:'Courier New',monospace;font-size:12px;color:#FF00FF;background:#000;padding:8px;margin-top:8px;">
+          // žanr: sve i svašta<br>
+          // motto: što gore to bolje<br>
+          // status: aktivni (uglavnom)
+        </p>
+      </div>
+
+      <!-- MUSIC SECTION -->
+      <div id="music">
+        <h2 class="section-title">MUZIKA</h2>
+      </div>
+
+      <div class="marquee-wrap" style="border-color:#FFFF00;">
+        <div class="marquee-content" style="color:#FF00FF;text-shadow:2px 2px 0 #00FF00;animation-duration:20s;">
+          🎵 DISKOGRAFIJA — KOMPLETAN KATALOG — SVA IZDANJA — STREAMING SADA DOSTUPAN — (ne baš) — 🎵
+        </div>
+      </div>
+
+      <div class="cover-grid">
+        <div class="cover-card">
+          <img src="../Images/covers/WhatsApp Image 2026-05-24 at 13.14.45.jpeg" alt="Album Cover" loading="lazy">
+          <div class="cover-label">IZDANJE #001</div>
+        </div>
+        <div class="cover-card">
+          <img src="../Images/covers/WhatsApp Image 2026-05-24 at 13.14.45 (1).jpeg" alt="Album Cover" loading="lazy">
+          <div class="cover-label">IZDANJE #002</div>
+        </div>
+        <div class="cover-card">
+          <img src="../Images/covers/WhatsApp Image 2026-05-24 at 13.14.45 (2).jpeg" alt="Album Cover" loading="lazy">
+          <div class="cover-label">IZDANJE #003</div>
+        </div>
+        <div class="cover-card">
+          <img src="../Images/covers/WhatsApp Image 2026-05-24 at 13.14.45 (3).jpeg" alt="Album Cover" loading="lazy">
+          <div class="cover-label">IZDANJE #004</div>
+        </div>
+        <div class="cover-card">
+          <img src="../Images/covers/WhatsApp Image 2026-05-24 at 13.14.46.jpeg" alt="Album Cover" loading="lazy">
+          <div class="cover-label">IZDANJE #005</div>
+        </div>
+        <div class="cover-card">
+          <img src="../Images/covers/WhatsApp Image 2026-05-24 at 13.14.46 (1).jpeg" alt="Album Cover" loading="lazy">
+          <div class="cover-label">IZDANJE #006</div>
+        </div>
+        <div class="cover-card">
+          <img src="../Images/covers/WhatsApp Image 2026-05-24 at 13.14.46 (2).jpeg" alt="Album Cover" loading="lazy">
+          <div class="cover-label">IZDANJE #007</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;padding:0 16px 20px;">
+        <a href="#" class="aero-btn">▶ SLUŠAJ NA SVIM PLATFORMAMA</a>
+        <a href="#" class="aero-btn aero-btn-green" style="margin-left:8px;">⬇ PREUZMI MP3 (128kbps)</a>
+      </div>
+
+      <!-- EVENTS SECTION -->
+      <div id="events">
+        <h2 class="section-title">DOGAĐAJI</h2>
+      </div>
+
+      <div class="brutal-box">
+        <p class="mono-text">
+          NEMA ZAKAZANIH DOGAĐAJA<br>
+          &mdash; JAVITE NAM SE AKO ŽELITE SVIRKU &mdash;
+        </p>
+        <p style="font-family:'Comic Sans MS',cursive;font-size:14px;margin-top:8px;">
+          Eventualni koncerti se dešavaju <span class="blink" style="color:#FF0000;">spontano</span> i <span class="blink" style="color:#0000FF;">neočekivano</span>. Pratite naš Instagram za najave.
+        </p>
+      </div>
+
+      <!-- CONTACT SECTION -->
+      <div id="contact">
+        <h2 class="section-title">KONTAKT</h2>
+      </div>
+
+      <div class="brutal-box brutal-box-pink">
+        <form class="brutal-form" onsubmit="return false;">
+          <label for="name">IME I PREZIME:</label>
+          <input type="text" id="name" placeholder="Unesi ovde...">
+
+          <label for="email">E-MAIL:</label>
+          <input type="email" id="email" placeholder="tvoj@email.com">
+
+          <label for="reason">RAZLOG KONTAKTA:</label>
+          <select id="reason">
+            <option>-- IZABERI --</option>
+            <option>Želim svirku</option>
+            <option>Hvala za muziku</option>
+            <option>Žalba na buku</option>
+            <option>Hoću da budem šesti član (čeka se šesti)</option>
+            <option>Ostalo / Nemam pojma</option>
+          </select>
+
+          <label for="message">PORUKA:</label>
+          <textarea id="message" rows="4" placeholder="Piši šta ti je na duši..."></textarea>
+
+          <br>
+          <button type="submit" class="aero-btn" style="margin-top:8px;">📨 POŠALJI PORUKU</button>
+          <em style="font-family:'Times New Roman',serif;font-size:11px;display:block;margin-top:6px;color:#808080;">
+            * forma ništa ne radi, pišite nam na e-mail
+          </em>
+        </form>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="brutal-box" style="margin-top:16px;">
+        <p class="mono-text" style="background:#00FF00;">
+          📞 PETAR: 064/0260771<br>
+          📧 visvrljika@gmail.com<br>
+          🌐 GORNJI MILANOVAC, SRBIJA
+        </p>
+      </div>
+
+    </td>
+
+    <!-- === SIDEBAR RIGHT === -->
+    <td width="22%" bgcolor="#C0C0C0" valign="top" style="padding:8px;">
+      <div style="background:#000000;border:4px solid #FF00FF;padding:8px;margin-bottom:10px;box-shadow:5px 5px 0 #FFFF00;">
+        <p style="font-family:'Impact','Arial Black',sans-serif;font-size:13px;color:#00FF00;text-align:center;margin:0;">🔗 LINKOVI</p>
+      </div>
+
+      <div style="text-align:center;">
+        <a href="https://www.instagram.com/visvrljika/" target="_blank" class="aero-btn" style="display:block;margin:8px auto;font-size:12px;padding:8px 16px;text-decoration:none;">📷 INSTAGRAM</a>
+        <a href="https://www.facebook.com/VokalnoInstrumentalniSastavVrljika" target="_blank" class="aero-btn aero-btn-green" style="display:block;margin:8px auto;font-size:12px;padding:8px 16px;text-decoration:none;">📘 FACEBOOK</a>
+      </div>
+
+      <div class="brutal-box" style="margin:16px 0;padding:10px;">
+        <p style="font-family:'Comic Sans MS',cursive;font-size:12px;text-align:center;line-height:1.4;">
+          <span class="blink" style="color:#FF00FF;">★</span>
+          WEBMASTER:<br>
+          <span style="font-family:'Courier New',monospace;">neko sa interneta</span><br>
+          <span style="font-size:10px;">© 2024-2026 VIS VRLJIKA</span><br>
+          <span class="blink" style="color:#FF00FF;">★</span>
+        </p>
+      </div>
+
+      <div style="text-align:center;">
+        <div class="badge-88x31" style="margin:2px auto;background:#FF0000;color:#FFFF00;">NO FRAMES</div>
+        <div class="badge-88x31" style="margin:2px auto;background:#0000EE;color:#FFFFFF;">GET<br>FIREFOX</div>
+        <div class="badge-88x31" style="margin:2px auto;">WEBRING</div>
+        <div class="badge-88x31" style="margin:2px auto;background:#FF00FF;color:#000000;">FREE<br>SPEECH</div>
+        <div class="badge-88x31" style="margin:2px auto;background:#FFFF00;color:#000000;">UNDER<br>CONSTRUCT</div>
+      </div>
+
+      <!-- Guestbook -->
+      <div id="guestbook" style="margin-top:16px;">
+        <div class="brutal-box brutal-box-pink" style="padding:10px;">
+          <p style="font-family:'Impact',sans-serif;font-size:14px;text-align:center;margin:0 0 8px;">📖 KNJIGA GOSTIJU</p>
+          <div style="font-family:'Comic Sans MS',cursive;font-size:11px;line-height:1.4;">
+            <p><strong>Marko iz Čačka:</strong><br>najbolji bend ikad!!!1!</p>
+            <hr style="border:2px dashed #FF00FF;">
+            <p><strong>Jelena_BG:</strong><br>svirali ste mi na svadbi, hvala!!! 💜</p>
+            <hr style="border:2px dashed #FF00FF;">
+            <p><strong>anonimus96:</strong><br>kad novi album?????</p>
+            <hr style="border:2px dashed #FF00FF;">
+            <p><strong>zvuk_majstor:</strong><br>pojačajte bas sledeći put</p>
+          </div>
+          <textarea style="width:90%;height:50px;font-family:'Comic Sans MS',cursive;font-size:11px;border:3px solid #000;margin-top:8px;background:#FFFF00;" placeholder="upiši poruku..."></textarea>
+          <br>
+          <button class="aero-btn" style="font-size:11px;padding:6px 14px;margin-top:4px;">POTPIŠI</button>
+          <em style="font-size:9px;display:block;margin-top:4px;">*ne radi, naravno</em>
+        </div>
+      </div>
+
+      <!-- Fake Webring -->
+      <div style="text-align:center;margin-top:12px;font-family:'Times New Roman',serif;font-size:10px;border:3px solid #000000;background:#FFFFFF;padding:6px;">
+        <p style="margin:0;">🔄 OVAJ SAJT JE DEO</p>
+        <p style="font-weight:bold;color:#FF00FF;font-size:12px;margin:2px 0;">GM BEND WEBRING</p>
+        <p style="margin:0;">[ <a href="#" style="color:#0000EE;">← PREV</a> | <a href="#" style="color:#0000EE;">RANDOM</a> | <a href="#" style="color:#0000EE;">NEXT →</a> ]</p>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<!-- ============ RAINBOW DIVIDER ============ -->
+<div class="rainbow-bar" style="animation-direction:reverse;"></div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="badge-row">
+    <div class="badge-88x31">VALID<br>HTML 4.01</div>
+    <div class="badge-88x31" style="background:#FF00FF;color:#000;">CSS 2.1</div>
+    <div class="badge-88x31" style="background:#00FF00;color:#000;">NOT<br>RESPONSIVE</div>
+    <div class="badge-88x31" style="background:#FF0000;color:#FFFF00;">BEST IN<br>800×600</div>
+    <div class="badge-88x31">MADE ON<br>A MAC</div>
+    <div class="badge-88x31" style="background:#0000EE;color:#FFFFFF;">GET<br>NETSCAPE</div>
+    <div class="badge-88x31" style="background:#FFFF00;color:#000;">FREE<br>PALESTINE</div>
+    <div class="badge-88x31">SINCE<br>2023</div>
+  </div>
+
+  <p style="font-family:'Courier New',monospace;color:#00FF00;font-size:14px;margin-top:8px;">
+    ╔══════════════════════════════════════╗<br>
+    ║  VIS VRLJIKA © 2023-2026           ║<br>
+    ║  Gornji Milanovac, Republika Srbija ║<br>
+    ║  visvrljika@gmail.com              ║<br>
+    ║  Petar: 064/0260771                ║<br>
+    ╚══════════════════════════════════════╝
+  </p>
+
+  <p style="font-family:'Comic Sans MS',cursive;font-size:11px;color:#808080;margin-top:12px;">
+    Ovaj sajt je namerno ružan. <span class="blink">Uživajte.</span><br>
+    Hostovano na nekom random serveru. Verovatno.
+  </p>
+
+  <div class="hit-counter" style="margin-top:10px;font-size:12px;">
+    POSETILACA DANAS: <span id="daily-hits">666</span>
+  </div>
+
+  <p class="secret-message">
+    ako čitaš ovo, verovatno si pogledao source code. svaka čast. piši nam.
+  </p>
+</footer>
+
+<!-- ============ CURSOR TRAIL SCRIPT ============ -->
+<script>
+(function() {
+  var emojis = ['✦','★','💎','🔮','⚡','🌀','💿','🎵','✨','💜','🔊','🎸'];
+  var trailing = false;
+  var lastTime = 0;
+
+  document.addEventListener('mousemove', function(e) {
+    var now = Date.now();
+    if (now - lastTime < 80) return;
+    lastTime = now;
+
+    var trail = document.createElement('div');
+    trail.className = 'cursor-trail';
+    trail.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    trail.style.left = (e.pageX - 8) + 'px';
+    trail.style.top = (e.pageY - 8) + 'px';
+    document.body.appendChild(trail);
+
+    setTimeout(function() {
+      if (trail.parentNode) trail.parentNode.removeChild(trail);
+    }, 1000);
+  });
+
+  // Animate hit counter
+  var counter = document.getElementById('hit-counter');
+  if (counter) {
+    var hits = 42069;
+    setInterval(function() {
+      hits += Math.floor(Math.random() * 7);
+      counter.textContent = String(hits).padStart(9, '0');
+    }, 5000);
+  }
+
+  // Animate daily hits
+  var daily = document.getElementById('daily-hits');
+  if (daily) {
+    setInterval(function() {
+      var d = parseInt(daily.textContent) || 666;
+      d += Math.floor(Math.random() * 5) - 2;
+      if (d < 0) d = 0;
+      daily.textContent = d;
+    }, 3000);
+  }
+
+  // Glitch text effect on section titles
+  document.querySelectorAll('.section-title').forEach(function(el) {
+    if (!el.getAttribute('data-text')) {
+      el.setAttribute('data-text', el.textContent);
+    }
+    el.classList.add('glitch-text');
+  });
+
+  // Random element jitter (anti-design)
+  setInterval(function() {
+    var boxes = document.querySelectorAll('.brutal-box');
+    if (boxes.length > 0) {
+      var box = boxes[Math.floor(Math.random() * boxes.length)];
+      var origTransform = box.style.transform || '';
+      box.style.transform = 'translate(' +
+        (Math.random() * 4 - 2) + 'px, ' +
+        (Math.random() * 4 - 2) + 'px)';
+      setTimeout(function() {
+        box.style.transform = origTransform;
+      }, 200);
+    }
+  }, 8000);
+})();
+</script>
+
+</body>
+</html>
